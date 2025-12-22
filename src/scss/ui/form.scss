@@ -1,0 +1,208 @@
+// .form {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 32rem;
+//   @include small-tablet {
+//     gap: 20rem;
+//   }
+//   &__title {
+//     width: 480rem;
+//     @include small-tablet {
+//       width: 100%;
+//     }
+//   }
+
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 40rem;
+//     @include small-tablet {
+//       gap: 24rem;
+//     }
+//   }
+//   &__btn-box {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     gap: 20rem;
+//     @include small-tablet {
+//       flex-direction: column;
+//       gap: 20rem;
+//     }
+//   }
+
+//   &__input-box {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 32rem;
+//     @include small-tablet {
+//       gap: 20rem;
+//     }
+//   }
+//   &__label {
+//     position: relative;
+//     width: 100%;
+//     display: block;
+//   }
+//   &__label-inner {
+//     width: 100%;
+//     transition: padding 0.3s;
+//     display: flex;
+//     flex-direction: column-reverse;
+//     gap: 3rem;
+//     @include small-tablet {
+//       gap: 2rem;
+//     }
+
+//     &._form-error {
+//       & ~ .form__error {
+//         visibility: visible;
+//         opacity: 1;
+//         line-height: normal;
+//       }
+//     }
+//   }
+
+//   &__input {
+//     width: 100%;
+//     padding: 23rem 24rem;
+//     color: $black;
+//     background: $gray-light;
+//     border-radius: 48rem;
+//     @include small-tablet {
+//       padding: 16rem;
+//     }
+//     &::placeholder {
+//       color: $gray-txt;
+//     }
+//   }
+//   &__placeholder {
+//     padding-left: 24rem;
+//     @include small-tablet {
+//       padding-left: 16rem;
+//     }
+//   }
+//   //   &__textarea-wrap {
+//   //     position: relative;
+//   //     padding: 18rem 20rem;
+
+//   //     border: 2rem solid $tertiary-text;
+//   //     height: 140rem;
+//   //     @include small-tablet {
+//   //       padding: 18rem 16rem;
+//   //     }
+//   //   }
+//   //   &__textarea {
+//   //     resize: none;
+//   //     width: 100%;
+//   //     height: 100%;
+//   //     color: $text-primary;
+//   //     &::placeholder {
+//   //       color: $tertiary-text;
+//   //     }
+
+//   //     &::-webkit-scrollbar,
+//   //     &::-webkit-scrollbar-thumb,
+//   //     &::-webkit-scrollbar-track {
+//   //       display: none;
+//   //     }
+//   //   }
+
+//   //   &__textarea-count {
+//   //     position: absolute;
+//   //     z-index: 5;
+//   //     bottom: 20rem;
+//   //     right: 20rem;
+//   //     opacity: 0;
+//   //     &.active {
+//   //       opacity: 1;
+//   //     }
+//   //     @include small-tablet {
+//   //       bottom: 16rem;
+//   //       right: 16rem;
+//   //     }
+//   //   }
+
+//   &__error {
+//     position: absolute;
+//     bottom: -20rem;
+//     left: 24rem;
+//     color: red;
+//     font-weight: 400;
+//     line-height: 140%;
+//     visibility: hidden;
+//     opacity: 0;
+//     text-transform: none;
+//     transition: opacity 0.3s, visibility 0.3s;
+//     &.active {
+//       visibility: visible;
+//       opacity: 1;
+//       line-height: normal;
+//     }
+
+//     @include small-tablet {
+//       left: 16rem;   bottom: -16rem;
+//     }
+//   }
+
+//   &__check-label {
+//     display: flex;
+//     gap: 12rem;
+//     position: relative;
+//     cursor: pointer;
+//     width: 415rem;
+//     @include small-tablet {
+//       width: 100%;   
+//     }
+//     & input {
+//       position: absolute;
+//       opacity: 0;
+//       display: block;
+//       z-index: -1;
+//       &:checked {
+//         & ~ .form__check-square {
+//           background: $black;
+//           &:before {
+//             scale: 1;
+//           }
+//         }
+//       }
+//     }
+
+
+//     & a {
+//       text-decoration: underline;
+//     }
+//   }
+
+//   &__check-square {
+//     flex-shrink: 0;
+//     border: 1.8px solid $black;
+//     background: transparent;
+//     border-radius: 4rem;
+//     width: 28rem;
+//     height: 28rem;
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     transition: background 0.3s;
+//     pointer-events: none;
+//     @include small-tablet {
+//       width: 20rem;
+//       height: 20rem;
+//     }
+//     &::before {
+//       position: absolute;
+//       content: '';
+//       scale: 0;
+//       transform-origin: center center;
+//       transition: scale 0.3s;
+//       width: 100%;
+//       height: 100%;
+//       background: url(./assets/images/checked.svg) no-repeat top/cover;
+//       @include small-tablet {
+//       }
+//     }
+//   }
+// }

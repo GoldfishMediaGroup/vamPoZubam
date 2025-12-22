@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
+  <title>Главная</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <include src="./components/_header.html"></include>
+    <main>
+      <div class="container">
+
+        <button class="txt20 btn-primary"><span>Полезные советы</span></button>
+        <button class="txt20 btn-primary btn-primary--accent"><span>Полезные советы</span></button>
+
+        <button class="bem__swiper-btn bem__swiper-btn--next swiper-button swiper-button--prev">
+          <div class="swiper-button__svg">
+            <img class="noHover" src="./assets/images/arrGradient.svg" alt="">
+            <img class="hover" src="./assets/images/arrWhite.svg" alt="">
+          </div>
+        </button>
+        <button class="bem__swiper-btn bem__swiper-btn--next swiper-button swiper-button--next">
+          <div class="swiper-button__svg">
+            <img class="noHover" src="./assets/images/arrGradient.svg" alt="">
+            <img class="hover" src="./assets/images/arrWhite.svg" alt="">
+          </div>
+        </button>
+
+        <a href="#" class="bem__link link-primary">
+          <span class="link-primary__text txt20">Читать статью</span>
+          <span class="link-primary__svg-box">
+            <div class="link-primary__svg">
+              <img src="./assets/images/arrGradient.svg" alt="">
+            </div>
+          </span>
+        </a>
+      </div>
+    </main>
+    <include src="./components/_footer.html"></include>
+  </div>
+</body>
+
+</html>

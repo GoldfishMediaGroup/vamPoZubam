@@ -1,0 +1,122 @@
+@import './mixins';
+@import './flexs';
+
+$dark: #3d4546;
+$grey: #6a7373;
+$lightbg: #f6f6f6;
+$white: #fff;
+$accent: #318e88;
+$accentgradient: linear-gradient(133deg, #00909a 0%, #3cc7cd 100%);
+
+body {
+  color: $dark;
+  background: $lightbg;
+  font-family: 'OpenSans';
+
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  &.no-scroll {
+    overflow: hidden !important;
+    touch-action: none !important;
+    width: 100vw;
+
+    & main {
+      opacity: 0;
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  // overflow: hidden;
+}
+
+* {
+  // outline:  1px solid red;
+}
+
+// main
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 140rem;
+  padding: 32rem 0 60rem;
+
+  @include small-tablet {
+    gap: 56rem;
+    padding: 18rem 0 56rem;
+  }
+}
+
+.desktop {
+  display: flex;
+
+  @include small-tablet {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @include small-tablet {
+    display: flex;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+@for $i from 1 through 6 {
+  .grid#{$i} {
+    display: grid;
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+.cv {
+  align-items: center;
+}
+
+.ev {
+  align-items: flex-end;
+}
+
+.sb {
+  justify-content: space-between;
+}
+
+.jfe {
+  justify-content: flex-end;
+}
+
+.dc {
+  flex-direction: column;
+}
+
+.flex-cc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* .values__swiper */
+
+@import './ui/ui';

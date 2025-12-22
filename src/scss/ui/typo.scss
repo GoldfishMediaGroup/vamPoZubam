@@ -1,0 +1,126 @@
+.h1 {
+  font-weight: 700;
+  font-size: 52rem;
+  line-height: 131%;
+
+  @include small-tablet {
+    font-size: 26rem;
+    line-height: 123%;
+  }
+}
+
+.h2 {
+  font-weight: 600;
+  font-size: 44rem;
+  line-height: 136%;
+
+  @include small-tablet {
+    font-size: 26rem;
+    line-height: 123%;
+  }
+}
+
+.h3 {
+  font-weight: 700;
+  font-size: 32rem;
+  line-height: 138%;
+
+  @include small-tablet {
+    font-size: 14rem;
+    line-height: 143%;
+  }
+}
+
+.h4 {
+  font-weight: 700;
+  font-size: 28rem;
+  line-height: 129%;
+
+  @include small-tablet {
+    font-size: 16rem;
+    line-height: 125%;
+  }
+}
+
+
+.txt24 {
+  font-weight: 500;
+  font-size: 24rem;
+  line-height: 150%;
+
+  @include small-tablet {
+    font-size: 16rem;
+    line-height: 138%;
+  }
+}
+
+.txt20 {
+  font-weight: 600;
+  font-size: 20rem;
+  line-height: 130%;
+
+  @include small-tablet {
+    font-size: 14rem;
+    line-height: 171%;
+  }
+}
+
+.txt18 {
+  font-weight: 500;
+  font-size: 18rem;
+  line-height: 133%;
+
+  @include small-tablet {
+    font-size: 10rem;
+    line-height: 180%;
+  }
+}
+
+
+.light {
+  font-weight: 300 !important;
+}
+
+.regular {
+  font-weight: 400 !important;
+}
+
+.medium {
+  font-weight: 500 !important;
+}
+
+.semibold {
+  font-weight: 600 !important;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.italic {
+  font-style: italic !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.white {
+  color: $white;
+}
+
+.grey {
+  color: $grey;
+}
