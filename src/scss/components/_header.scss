@@ -1,0 +1,190 @@
+.header {
+  // .header__container
+  margin-top: 40rem;
+  // position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding-right: var(--fancybox-scrollbar-compensate);
+  @include small-tablet {
+    margin-top: 14rem;
+  }
+
+  &__container {
+  }
+
+  // .header__inner
+
+  &__inner {
+    padding: 12rem 48rem;
+    border-radius: 64rem;
+    background: $white;
+    box-shadow: 0 5rem 30rem rgba(203, 203, 203, 0.348);
+    // margin-right: var(--fancybox-scrollbar-compensate);
+    @include small-tablet {
+      padding: 12rem 18rem;
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  // .header__nav
+
+  &__nav {
+    @include small-tablet {
+      position: fixed;
+      inset: 0;
+      padding: 77rem 15rem 15rem;
+      height: 100vh;
+      height: 100dvh;
+      display: flex;
+      background: rgba(217, 217, 217, 0.46);
+      opacity: 0;
+      transition: opacity 0.5s;
+      pointer-events: none;
+      & .txt24 {
+        font-size: 16rem;
+      }
+      &.isOpen {
+        opacity: 1;
+        pointer-events: fill;
+        & .header__list {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  // .header__list
+
+  &__list {
+    gap: 112rem;
+    @include small-tablet {
+      flex-direction: column;
+      padding: 20rem;
+      flex-grow: 1;
+      border-radius: 16rem;
+      background: url(./assets/images/burgerMobBg.webp) no-repeat top/cover;
+      gap: 12rem;
+      align-items: flex-start;
+      transform: translateY(-110%);
+      transition: transform 0.5s;
+      overflow: auto;
+    }
+  }
+
+  // .header__link
+
+  &__link {
+    position: relative;
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -2rem;
+      left: 0;
+      background: $grey;
+      width: 0%;
+      height: 2rem;
+      transition: width 0.3s;
+    }
+  }
+
+  // .header__btn-box
+
+  &__btn-box {
+    gap: 12rem;
+    min-width: 300rem;
+    @include small-tablet {
+      min-width: unset;
+    }
+  }
+
+  // .header__btn
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56rem;
+    height: 56rem;
+    @include small-tablet {
+      width: 32rem;
+      height: 32rem;
+      border-radius: 50%;
+      background: $lightbg;
+    }
+    img {
+      width: 28rem;
+      height: 28rem;
+      @include small-tablet {
+        width: 24rem;
+        height: 24rem;
+      }
+    }
+  }
+  // .header__search-box
+
+  &__search-box {
+  }
+
+  // .header__search
+
+  &__search {
+  }
+
+  // .header__lk-box
+
+  &__lk-box {
+  }
+
+  // .header__lk-desk
+
+  &__lk-desk {
+    display: flex;
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  // .header__lk-mob
+
+  &__lk-mob {
+    display: none;
+    @include small-tablet {
+      display: flex;
+    }
+  }
+
+  // .header__burger
+
+  &__burger {
+    display: none;
+    @include small-tablet {
+      display: flex;
+      &.isOpen {
+        & img {
+          &.close {
+            scale: 0;
+          }
+          &.open {
+            scale: 1;
+          }
+        }
+      }
+      & img {
+        position: absolute;
+        transition: scale 0.3s;
+        &.close {
+          scale: 1;
+        }
+        &.open {
+          scale: 0;
+        }
+      }
+    }
+  }
+}
