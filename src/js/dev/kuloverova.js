@@ -16,8 +16,8 @@ export const modules = {};
 
 import headerBurger from '../components/headerBurger';
 import faqAccordion from '../components/faqAccordion';
-
-
+import recom from '../components/recom';
+import articles from '../components/articles';
 import hero from '../components/hero';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fancybox()
   headerBurger();
   faqAccordion();
-
- 
+  recom()
+  articles()
   hero()
 });

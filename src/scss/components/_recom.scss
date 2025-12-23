@@ -1,0 +1,220 @@
+.recom {
+  // .recom__container
+
+  &__container {
+  }
+
+  // .recom__inner
+
+  &__inner {
+    padding: 48rem;
+    border-radius: 20rem;
+    overflow: hidden;
+    background: $white;
+    gap: 48rem;
+    @include small-tablet {
+      padding: 16rem;
+      border-radius: 16rem;
+      gap: 20rem;
+    }
+  }
+
+  // .recom__head
+
+  &__head {
+  }
+
+  &__btn {
+    padding: 21rem 57rem;
+    @include small-tablet {
+      width: 100%;
+      padding: 12rem;
+    }
+  }
+
+  // .recom__swiper-wrapp
+
+  &__swiper-wrapp {
+    display: grid;
+    grid-template-columns: 853rem 853rem;
+    gap: 20rem 48rem;
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+  }
+
+  // .recom__swiper-img
+
+  &__swiper-img {
+    width: 100%;
+    min-height: 480rem;
+    @include small-tablet {
+      height: 198rem !important;
+      min-height: unset;
+      order: 1;
+      & .swiper-wrapper {
+        height: 100% !important;
+      }
+    }
+  }
+
+  // .recom__slide-img
+
+  &__slide-img {
+    border-radius: 17rem;
+    overflow: hidden;
+    @include small-tablet {
+      border-radius: 12rem;
+      height: 100% !important;
+    }
+  }
+
+  // .recom__slide-img--video
+
+  &__slide-img--video {
+    position: relative;
+    &:hover {
+      &::before {
+        scale: 1.1;
+      }
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      background: url(./assets/images/playBtn.svg) no-repeat top/cover;
+      width: 68rem;
+      height: 68rem;
+      bottom: 24rem;
+      left: 40rem;
+      transition: scale 0.3s;
+      @include small-tablet {
+        width: 24rem;
+        height: 24rem;
+        bottom: 16rem;
+        left: 16rem;
+      }
+    }
+  }
+
+  // .recom__img
+
+  &__img {
+  }
+
+  // .recom__swiper-text-box
+
+  &__swiper-text-box {
+    width: 100%;
+    gap: 20rem;
+    @include small-tablet {
+      order: 3;
+    }
+  }
+
+  // .recom__swiper-text
+
+  &__swiper-text {
+    width: 100%;
+  }
+
+  // .recom__slide-text
+
+  &__slide-text {
+  }
+
+  // .recom__slide-text-content
+
+  &__slide-text-content {
+    gap: 24rem;
+    @include small-tablet {
+      gap: 12rem;
+    }
+  }
+
+  &__slide-text-box {
+    gap: 16rem;
+    @include small-tablet {
+      gap: 12rem;
+    }
+  }
+
+  // .recom__nav-box
+
+  &__nav-box {
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  // .recom__swiper-btn
+
+  &__swiper-btn {
+  }
+
+  // .recom__swiper-btn--next
+
+  &__swiper-btn--next {
+  }
+
+  // .recom__swiper-thumbs
+
+  &__swiper-thumbs {
+    grid-column: 1 / -1;
+    width: 100%;
+    @include small-tablet {
+      order: 2;
+      overflow: visible !important;
+      margin-bottom: 8rem;
+    }
+  }
+
+  // .recom__slide-thumbs
+
+  &__slide-thumbs {
+    border-radius: 12rem;
+    overflow: hidden;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      inset: 0;
+      content: '';
+      backdrop-filter: blur(2rem);
+      -webkit-backdrop-filter: blur(2rem);
+      background: rgba(92, 92, 92, 0.47);
+      transition: opacity 0.3s;
+      z-index: 5;
+      @include small-tablet {
+        backdrop-filter: blur(0.4rem);
+        -webkit-backdrop-filter: blur(0.4rem);
+      }
+    }
+    &:hover:not(.swiper-slide-thumb-active) {
+      & .recom__slide-thumbs-img img,
+      & .recom__slide-thumbs-img video {
+        scale: 1.1;
+      }
+    }
+    &.swiper-slide-thumb-active {
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  // .recom__slide-thumbs-img
+
+  &__slide-thumbs-img {
+    height: 234rem;
+    width: 100%;
+    overflow: hidden;
+    & img,
+    & video {
+      transition: scale 0.3s;
+    }
+    @include small-tablet {
+      height: 60rem;
+    }
+  }
+}

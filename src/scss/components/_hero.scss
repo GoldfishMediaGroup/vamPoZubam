@@ -138,6 +138,9 @@
   // .hero__pagination
 
   &__pagination {
+    @include desk-only {
+      display: none;
+    }
   }
   &__small-banner {
     position: relative;
