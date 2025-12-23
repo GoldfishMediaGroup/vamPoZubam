@@ -1,0 +1,160 @@
+.articles {
+  // .articles__container
+
+  &__container {
+  }
+
+  // .articles__inner
+
+  &__inner {
+    border-radius: 20rem;
+    padding: 56rem 48rem;
+    background: $white;
+    display: grid;
+    gap: 20rem;
+    grid-template-columns: 549rem 1160rem;
+    overflow: hidden;
+    @include small-tablet {
+      border-radius: 16rem;
+      padding: 16rem;
+      display: flex;
+      flex-direction: column;
+      gap: 20rem;
+    }
+  }
+
+  // .articles__info
+
+  &__info {
+    gap: 90rem;
+    background: inherit;
+    z-index: 2;
+    position: relative;
+    margin-left: -48rem;
+    padding-left: 48rem;
+    @include small-tablet {
+      margin: 0 0 4rem 0;
+      padding: 0;
+    }
+  }
+
+  // .articles__head
+
+  &__head {
+    gap: 48rem;
+  }
+
+  // .articles__name
+
+  &__name {
+    gap: 20rem;
+    @include small-tablet {
+      gap: 12rem;
+    }
+  }
+
+  // .articles__btn
+
+  &__btn {
+    padding: 21rem 54rem;
+    @include small-tablet {
+      padding: 12rem;
+      width: 100%;
+    }
+  }
+
+  // .articles__nav-box
+
+  &__nav-box {
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  // .articles__swiper-btn
+
+  &__swiper-btn {
+  }
+
+  // .articles__swiper-btn--next
+
+  &__swiper-btn--next {
+  }
+
+  // .articles__swiper-box
+
+  &__swiper-box {
+  }
+
+  // .articles__swiper
+
+  &__swiper {
+    overflow: visible !important;
+  }
+
+  // .articles__slide
+
+  &__slide {
+    height: auto !important;
+  }
+}
+
+.article {
+  border-radius: 16rem;
+  padding: 16rem 16rem 22rem;
+  background: $lightbg;
+  height: 100%;
+  gap: 32rem;
+  @include small-tablet {
+    border-radius: 12rem;
+    padding: 12rem;
+    gap: 12rem;
+  }
+  &:hover {
+    & .article__link {
+      & .link-primary__svg {
+        transform: translateX(6rem);
+      }
+    }
+  }
+
+  // .article__img
+
+  &__img {
+    border-radius: 10rem;
+    overflow: hidden;
+    width: 100%;
+    height: 280rem;
+    @include small-tablet {
+      border-radius: 5rem;
+      height: 150rem;
+    }
+  }
+
+  // .article__content
+
+  &__content {
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 32rem;
+    @include small-tablet {
+      gap: 20rem;
+    }
+  }
+
+  // .article__desc
+
+  &__desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  // .article__link
+
+  &__link {
+    align-self: flex-end;
+  }
+}
