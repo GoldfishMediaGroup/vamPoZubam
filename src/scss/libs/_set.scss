@@ -108,12 +108,9 @@ ul li {
 }
 
 .container {
-  width: 1856rem;
+  width: 1824rem;
   margin: 0 auto;
-  &--short {
-    width: 1680rem;
-    margin: 0 auto;
-  }
+
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -163,10 +160,8 @@ sup {
   }
 
   .container {
-    padding: 0 12rem; // в моб версии отступ от края задаем для всех контейнеров, а там где не нужно можем точечно убрать
+    padding: 0 16rem; // в моб версии отступ от края задаем для всех контейнеров, а там где не нужно можем точечно убрать
     width: 100%;
-    &--short {
-      padding: 0 12rem;
-    }
+
   }
 }

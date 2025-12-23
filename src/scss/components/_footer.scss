@@ -1,0 +1,140 @@
+.footer {
+  margin-top: 57rem;
+  margin-bottom: 50rem;
+  @include small-tablet {
+    margin-top: 50rem;
+    margin-bottom: 14rem;
+  }
+
+  // .footer__container
+
+  &__container {
+  }
+
+  // .footer__inner
+
+  &__inner {
+    padding: 28rem 48rem 35rem;
+    border-radius: 20rem;
+    background: $white;
+    gap: 36rem;
+    @include small-tablet {
+      border-radius: 16rem;
+      padding: 16rem;
+    }
+  }
+
+  // .footer__top
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    @include small-tablet {
+      gap: 16rem;
+    }
+  }
+
+  // .footer__info
+
+  &__info {
+    gap: 10rem;
+    @include small-tablet {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 18rem;
+    }
+  }
+
+  // .footer__nav
+
+  &__nav {
+  }
+
+  // .footer__list
+
+  &__list {
+    gap: 80rem;
+    @include small-tablet {
+      flex-wrap: wrap;
+      gap: 4rem 20rem;
+      width: 200rem;
+    }
+  }
+
+  // .footer__link
+
+  &__link {
+    position: relative;
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -2rem;
+      left: 0;
+      background: $grey;
+      width: 0%;
+      height: 2rem;
+      transition: width 0.3s;
+    }
+  }
+
+  // .footer__btn-box
+
+  &__btn-box {
+    @include small-tablet {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  // .footer__btn
+
+  &__btn {
+    padding: 17rem 29rem;
+    @include small-tablet {
+      padding: 4rem 12rem;
+    }
+  }
+
+  // .footer__policy
+
+  &__policy {
+    gap: 20rem;
+    @include small-tablet {
+      gap: 5rem;
+    }
+  }
+
+  // .footer__policy-list
+
+  &__policy-list {
+    gap: 20rem;
+    @include small-tablet {
+      gap: 5rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  // .footer__disclaimer
+
+  &__disclaimer {
+    width: 1684rem;
+    height: 63rem;
+    margin: 0 auto;
+    @include small-tablet {
+      width: 329rem;
+      height: 16rem;
+      margin: 0 -9rem;
+      & img {
+        object-fit: contain;
+      }
+    }
+  }
+}

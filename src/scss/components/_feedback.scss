@@ -1,0 +1,83 @@
+.feedback {
+  // .feedback__container
+
+  &__container {
+  }
+
+  // .feedback__inner
+
+  &__inner {
+    background: $accentgradient;
+
+    border-radius: 20rem;
+    padding: 62rem 92rem 48rem 928rem;
+    position: relative;
+    min-height: 575rem;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url(./assets/images/feedbackBgDesk.webp) no-repeat top/cover;
+      mix-blend-mode: multiply;
+          @include small-tablet {
+             background: url(./assets/images/feedbackBgMob.webp) no-repeat top/cover;
+          }
+    }
+    @include small-tablet {
+      border-radius: 16rem;
+      padding: 20rem 16rem 14rem;
+      min-height: 481rem;
+    }
+  }
+
+  // .feedback__photo
+
+  &__photo {
+    position: absolute;
+    width: 898rem;
+    height: 566rem;
+    bottom: 0;
+    left: 54rem;
+    @include small-tablet {
+      width: 413rem;
+      height: 261rem;
+      left: -1rem;
+    }
+  }
+
+  // .feedback__content
+
+  &__content {
+    gap: 160rem;
+    justify-content: space-between;
+    flex-grow: 1;
+    @include small-tablet {
+      gap: 180rem;
+    }
+  }
+
+  // .feedback__head
+
+  &__head {
+    gap: 20rem;
+    @include small-tablet {
+      gap: 8rem;
+    }
+  }
+
+  // .feedback__title
+
+  &__title {
+  }
+
+  &__btn {
+    padding: 21rem 24rem;
+    @include small-tablet {
+      width: 100%;
+      padding: 12rem;
+    }
+  }
+}

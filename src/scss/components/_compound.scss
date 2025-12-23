@@ -1,0 +1,107 @@
+.compound {
+  // .compound__container
+
+  &__container {
+  }
+
+  // .compound__inner
+
+  &__inner {
+    gap: 48rem;
+    margin: 52rem 0;
+    @include small-tablet {
+      margin: 0;
+      gap: 20rem;
+      & .h2 {
+        text-align: left;
+      }
+    }
+  }
+
+  // .compound__list
+
+  &__list {
+    gap: 20rem;
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+  }
+
+  // .compound__item
+
+  &__item {
+    position: relative;
+    background: $accentgradient;
+    border-radius: 40rem;
+    padding: 48rem;
+    min-height: 582rem;
+    gap: 40rem;
+    @include small-tablet {
+      border-radius: 16rem;
+      padding: 16rem;
+      min-height: 320rem;
+      gap: 8rem;
+      justify-content: flex-start;
+    }
+  }
+
+  // .compound__decor
+
+  &__decor {
+    position: absolute;
+    inset: 0;
+
+    & img {
+      mix-blend-mode: luminosity;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: right bottom;
+    }
+  }
+
+  // .compound__head
+
+  &__head {
+    gap: 70rem;
+    position: relative;
+    z-index: 2;
+    @include small-tablet {
+      flex-direction: column-reverse;
+      gap: 20rem;
+    }
+  }
+
+  // .compound__billet
+
+  &__billet {
+    color: $dark;
+    background: $asideGradient;
+    padding: 11rem 22.5rem;
+    border-radius: 300rem;
+    @include small-tablet {
+      padding: 1rem 20rem;
+    }
+  }
+
+  // .compound__info
+
+  &__info {
+    position: relative;
+    z-index: 2;
+    gap: 24rem;
+    @include small-tablet {
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+  }
+
+  &__btn {
+    padding: 21rem 24rem;
+    @include small-tablet {
+      padding: 12rem 40rem;
+    }
+  }
+}

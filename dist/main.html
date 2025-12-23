@@ -1,34 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
+    <title>Главная</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
-  <title>Главная</title>
-<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
-
-<body>
-  <div class="wrapper">
-    <header class="header">
+  <body>
+    <div class="wrapper">
+      <header class="header">
   <div class="header__container container">
-    <div class="header__inner">
-      
+    <div class="header__inner flex cv sb">
+      <a href="#" class="header__logo logo">
+        <img src="./assets/images/logo.webp" alt="">
+      </a>
+      <nav class="header__nav " data-da=".header__container, 768, last">
+        <ul class="header__list flex cv txt20">
+          <li>
+            <a class="header__link">Статьи</a>
+          </li>
+          <li>
+            <a class="header__link">Советы</a>
+          </li>
+          <li>
+            <a class="header__link">Помощь</a>
+          </li>
+          <li>
+            <a class="header__link">Акция</a>
+          </li>
+          <li>
+            <a class="header__link">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__btn-box flex cv ">
+        <!-- <div class="header__search-box">
+          <button class="header__search header__btn">
+            <img src="./assets/images/search.svg" alt="" />
+          </button>
+        </div>
+        <div class="header__lk-box">
+          <button class="header__lk-desk btn-primary btn-primary--accent txt18"><span>Личный кабинет</span></button>
+       
+          <button class="header__lk-mob header__btn">
+            <img src="./assets/images/login.svg" alt="" />
+          </button>
+        </div> -->
+
+        <button class="header__burger header__btn">
+          <img class="close" src="./assets/images/burgerClose.svg" alt="">
+          <img class="open" src="./assets/images/burgerOpen.svg" alt="">
+        </button>
+      </div>
     </div>
   </div>
 </header>
-    <main>
-     
-    </main>
-    <footer class="footer">
-  <div class="footer__container container">
-    <div class="footer__inner">
 
+      <main>
+        <section class="hero">
+  <div class="hero__container container">
+    <div class="hero__inner">
+      <div class="hero__swiper-box white">
+        <div class="hero__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="hero__slide swiper-slide">
+              <div class="hero__slide-bg">
+                <picture class="hero__bg-img">
+                  <source srcset="./assets/images/heroSlide1Mob.webp" media="(max-width: 768px)">
+                  <source srcset="./assets/images/heroSlide1.webp" media="(min-width: 769px)">
+                  <img src="./assets/images/heroSlide1.webp" alt="">
+                </picture>
+              </div>
+              <div class="hero__content flex dc">
+                <div class="hero__head flex dc sb">
+                  <p class="h1">Живи, ешь, улыбайся без ограничений</p>
+                  <p class="txt24">
+                    Этот&nbsp;портал поможет вам&nbsp;понять, как&nbsp;ухаживать за&nbsp;протезами, элайнерами и&nbsp;поддерживать здоровье полости&nbsp;рта.
+                  </p>
+                </div>
+                <button class="hero__btn txt20 btn-primary"><span>Полезные советы</span></button>
+              </div>
+            </div>
+            <div class="hero__slide swiper-slide">
+              <div class="hero__slide-bg">
+                <picture class="hero__bg-img">
+                  <source srcset="./assets/images/heroSlide1Mob.webp" media="(max-width: 768px)">
+                  <source srcset="./assets/images/heroSlide1.webp" media="(min-width: 769px)">
+                  <img src="./assets/images/heroSlide1.webp" alt="">
+                </picture>
+              </div>
+              <div class="hero__content flex dc">
+                <div class="hero__head flex dc sb">
+                  <p class="h1">улыбайся без ограничений Живи, ешь,</p>
+                  <p class="txt24">
+                    Этот&nbsp;портал поможет вам&nbsp;понять, Этот&nbsp;портал поможет вам&nbsp;понять, как&nbsp;ухаживать за&nbsp;протезами, элайнерами
+                    и&nbsp;поддерживать здоровье полости&nbsp;рта.
+                  </p>
+                </div>
+                <button class="hero__btn txt20 btn-primary"><span>Полезные советы</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__nav-box swiper-btn-box">
+          <button class="hero__swiper-btn hero__swiper-btn--next swiper-button swiper-button--prev">
+            <div class="swiper-button__svg">
+              <img class="noHover" src="./assets/images/arrGradient.svg" alt="">
+              <img class="hover" src="./assets/images/arrWhite.svg" alt="">
+            </div>
+          </button>
+          <button class="hero__swiper-btn hero__swiper-btn--next swiper-button swiper-button--next">
+            <div class="swiper-button__svg">
+              <img class="noHover" src="./assets/images/arrGradient.svg" alt="">
+              <img class="hover" src="./assets/images/arrWhite.svg" alt="">
+            </div>
+          </button>
+        </div>
+
+        <div class="hero__pagination swiper-pagination"></div>
+      </div>
+      <div class="hero__gift-box hero__small-banner white">
+        <div class="hero__gift-bg hero__small-banner-bg">
+          <img src="./assets/images/heroGift.webp" alt="">
+        </div>
+        <div class="hero__gift-content flex dc sb">
+          <p class="hero__gift-billet txt20">Акция</p>
+          <p class="h3 upper">
+            подари себе
+            <br>
+            улыбку мечты
+          </p>
+        </div>
+      </div>
+      <div class="hero__garanty-box hero__small-banner">
+        <div class="hero__garanty-bg hero__small-banner-bg">
+          <img src="./assets/images/heroGaranty.webp" alt="">
+        </div>
+        <div class="hero__garanty-content flex dc">
+          <p class="h3 upper">
+            Гарантия
+            <br>
+            удовлетворённости
+          </p>
+          <p class="txt24">
+            Результат не оправдал ожиданий?
+            <br>
+            Вернем вам деньги!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="articles">
+  <div class="articles__container container">
+    <div class="articles__inner">
+      <div class="articles__info flex dc sb">
+        <div class="articles__head flex dc">
+          <div class="articles__name flex dc">
+            <p class="h2">Вы только начали носить протез?</p>
+            <p class="txt24 grey">
+              Это&nbsp;нормально&nbsp;— чувствовать себя неуверенно. На&nbsp;этом портале мы&nbsp;собрали всё, что&nbsp;действительно важно в&nbsp;первые недели
+            </p>
+          </div>
+          <button data-da=".articles__inner, 768, last" class="articles__btn txt20 btn-primary btn-primary--accent">
+            <span>Все статьи</span>
+          </button>
+        </div>
+
+        <div class="articles__nav-box swiper-btn-box">
+          <button class="articles__swiper-btn articles__swiper-btn--next swiper-button swiper-button--prev">
+            <div class="swiper-button__svg">
+              <img class="noHover" src="./assets/images/arrGradient.svg" alt="">
+              <img class="hover" src="./assets/images/arrWhite.svg" alt="">
+            </div>
+          </button>
+          <button class="articles__swiper-btn articles__swiper-btn--next swiper-button swiper-button--next">
+            <div class="swiper-button__svg">
+              <img class="noHover" src="./assets/images/arrGradient.svg" alt="">
+              <img class="hover" src="./assets/images/arrWhite.svg" alt="">
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="articles__swiper-box">
+        <div class="articles__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="articles__slide swiper-slide">
+              <a href="#" class="article flex dc">
+                <div class="article__img">
+                  <img src="./assets/images/article1.webp" alt="">
+                </div>
+                <div class="article__content flex dc">
+                  <p class="article__desc txt24">Нужен ли фиксирующий крем — и как его наносить, чтобы не было комочков</p>
+                  <div class="article__link link-primary">
+                    <span class="link-primary__text txt20">Читать статью</span>
+                    <span class="link-primary__svg-box">
+                      <div class="link-primary__svg">
+                        <img src="./assets/images/arrGradient.svg" alt="">
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="articles__slide swiper-slide">
+              <a href="#" class="article flex dc">
+                <div class="article__img">
+                  <img src="./assets/images/article2.webp" alt="">
+                </div>
+                <div class="article__content flex dc">
+                  <p class="article__desc txt24">Как&nbsp;правильно чистить протез, чтобы&nbsp;он&nbsp;служил дольше и&nbsp;не&nbsp;царапался</p>
+                  <div class="article__link link-primary">
+                    <span class="link-primary__text txt20">Читать статью</span>
+                    <span class="link-primary__svg-box">
+                      <div class="link-primary__svg">
+                        <img src="./assets/images/arrGradient.svg" alt="">
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="articles__slide swiper-slide">
+              <a href="#" class="article flex dc">
+                <div class="article__img">
+                  <img src="./assets/images/article1.webp" alt="">
+                </div>
+                <div class="article__content flex dc">
+                  <p class="article__desc txt24">Нужен ли фиксирующий крем</p>
+                  <div class="article__link link-primary">
+                    <span class="link-primary__text txt20">Читать статью</span>
+                    <span class="link-primary__svg-box">
+                      <div class="link-primary__svg">
+                        <img src="./assets/images/arrGradient.svg" alt="">
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="articles__slide swiper-slide">
+              <a href="#" class="article flex dc">
+                <div class="article__img">
+                  <img src="./assets/images/article2.webp" alt="">
+                </div>
+                <div class="article__content flex dc">
+                  <p class="article__desc txt24">
+                    Как&nbsp;правильно чистить протез, чтобы&nbsp;он&nbsp;служил дольше и&nbsp;не&nbsp;царапался Как&nbsp;правильно чистить протез,
+                    чтобы&nbsp;он&nbsp;служил дольше и&nbsp;не&nbsp;царапался
+                  </p>
+                  <div class="article__link link-primary">
+                    <span class="link-primary__text txt20">Читать статью</span>
+                    <span class="link-primary__svg-box">
+                      <div class="link-primary__svg">
+                        <img src="./assets/images/arrGradient.svg" alt="">
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="compound">
+  <div class="compound__container container">
+    <div class="compound__inner flex dc">
+      <p class="h2 center">Составляющие комфортного ношения протеза</p>
+      <ul class="compound__list grid2 white">
+        <li class="compound__item flex dc sb">
+          <div class="compound__decor">
+            <img src="./assets/images/compound1.webp" alt="">
+          </div>
+          <div class="compound__head flex sv sb">
+            <p class="h3">Фиксация - чтобы протез держался надёжно</p>
+            <div class="compound__billet txt20">Фиксация</div>
+          </div>
+          <div class="compound__info flex dc">
+            <p class="txt24">
+              Если&nbsp;протез шатается, сползает или&nbsp;«гуляет»
+              <br>
+              во&nbsp;рту&nbsp;— вы&nbsp;не&nbsp;сможете есть, говорить
+              <br>
+              или&nbsp;смеяться без&nbsp;страха.
+            </p>
+            <button class="compound__btn txt20 btn-primary"><span>Подобрать фиксацию</span></button>
+          </div>
+        </li>
+        <li class="compound__item flex dc sb">
+          <div class="compound__decor">
+            <img src="./assets/images/compound2.webp" alt="">
+          </div>
+          <div class="compound__head flex sv sb">
+            <p class="h3">Очищение&nbsp;— чтобы&nbsp;протез оставался чистым и&nbsp;безопасным</p>
+            <div class="compound__billet txt20">Очищение</div>
+          </div>
+          <div class="compound__info flex dc">
+            <p class="txt24">
+              Протез — как вторая кожа: его нужно чистить каждый
+              <br>
+              день. Но обычной зубной пастой — нельзя: она царапает
+              <br>
+              поверхность, и в микротрещинах скапливаются
+              <br>
+              бактерии.
+            </p>
+            <button class="compound__btn txt20 btn-primary"><span>Подобрать очищение</span></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+        <section class="return">
+  <div class="return__container container">
+    <div class="return__inner white">
+      <div class="return__main">
+        <div class="return__content flex dc">
+          <div class="return__head flex dc">
+            <p class="h2">
+              Не устроил результат —
+         
+              вернем деньги!
+            </p>
+            <p class="txt24">Мы уверены в качестве товаров, поэтому предоставляем гарантию возврата средств</p>
+          </div>
+          <button class="return__btn txt20 btn-primary"><span>Вернуть деньги</span></button>
+        </div>
+        <div class="return__decor">
+          <picture class="hero__bg-img">
+            <source srcset="./assets/images/returnDecorMob.webp" media="(max-width: 768px)">
+            <source srcset="./assets/images/returnDecor.webp" media="(min-width: 769px)">
+            <img src="./assets/images/returnDecor.webp" alt="">
+          </picture>
+        </div>
+      </div>
+      <ul class="return__list flex dc">
+        <li class="return__item flex dc">
+          <div class="return__item-head flex cv">
+            <p class="return__item-num txt24 medium">01</p>
+            <p class="return__item-title h4">Заполните форму</p>
+          </div>
+          <p class="txt24">Нам понадобится немного данных, чтобы корректно оформить возврат средств</p>
+        </li>
+        <li class="return__item flex dc">
+          <div class="return__item-head flex cv">
+            <p class="return__item-num txt24 medium">02</p>
+            <p class="return__item-title h4">Загрузите чек</p>
+          </div>
+          <p class="txt24">Прикрепите чек для подтверждения совершённой покупки</p>
+        </li>
+        <li class="return__item flex dc">
+          <div class="return__item-head flex cv">
+            <p class="return__item-num txt24 medium">03</p>
+            <p class="return__item-title h4">Получите деньги</p>
+          </div>
+          <p class="txt24">Средства будут зачислены на ваш счёт в течение 10 дней</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+        <section class="faq">
+  <div class="faq__container container">
+    <div class="faq__inner flex">
+      <div class="faq__faq flex dc">
+        <p class="faq__title h2">Популярные вопросы</p>
+        <div class="faq__accordion flex dc ">
+          <!-- 1 -->
+          <div class="faq__item">
+            <div class="faq__head flex cv sb">
+              <p class="txt24 semibold">Почему увеличилось слюноотделение?</p>
+              <div class="faq__plus">
+                <img src="./assets/images/faqArr.svg" alt="">
+              </div>
+            </div>
+            <div class="faq__info">
+              <p class="txt20">
+                Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс»
+                является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус»
+              </p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="faq__item">
+            <div class="faq__head flex cv sb">
+              <p class="txt24 semibold">Нужен ли крем при частичном протезе?</p>
+              <div class="faq__plus">
+                <img src="./assets/images/faqArr.svg" alt="">
+              </div>
+            </div>
+            <div class="faq__info">
+              <p class="txt20">
+                Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс»
+                является АО «Хелео Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции
+                «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон
+                Рус»кции «Программа ВольтаФлекс» является АО «Хелеон Рус»
+              </p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="faq__item">
+            <div class="faq__head flex cv sb">
+              <p class="txt24 semibold">Какие продукты можно есть с протезом?</p>
+              <div class="faq__plus">
+                <img src="./assets/images/faqArr.svg" alt="">
+              </div>
+            </div>
+            <div class="faq__info">
+              <p class="txt20">
+                Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс»
+                является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус»
+              </p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="faq__item">
+            <div class="faq__head flex cv sb">
+              <p class="txt24 semibold">Почему нельзя использовать отбеливающие средства?</p>
+              <div class="faq__plus">
+                <img src="./assets/images/faqArr.svg" alt="">
+              </div>
+            </div>
+            <div class="faq__info">
+              <p class="txt20">
+                Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс»
+                является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции
+                «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон
+                Рус» Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус»
+              </p>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="faq__item">
+            <div class="faq__head flex cv sb">
+              <p class="txt24 semibold">Можно ли спать в протезе?</p>
+              <div class="faq__plus">
+                <img src="./assets/images/faqArr.svg" alt="">
+              </div>
+            </div>
+            <div class="faq__info">
+              <p class="txt20">
+                Организатором Акции «Программа ВольтаФлекс» является АО «Хелеон Рус» Организатором Акции «Программа ВольтаФлекс» я
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faq__aside flex dc cv">
+        <ul class="faq__aside-list flex dc">
+          <li>
+            <a href="#" class="faq__aside-link">
+                <img src="./assets/images/ozon.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="#" class="faq__aside-link">
+                <img src="./assets/images/uteca.svg" alt="">
+            </a>
+          </li>
+        </ul>
+        <p class="h3 center medium">Купить средства по&nbsp;уходу и&nbsp;фиксации зубных протезов</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="feedback">
+  <div class="feedback__container container">
+    <div class="feedback__inner">
+      <div class="feedback__photo">
+        <img src="./assets/images/feedbackPhoto.webp" alt="">
+      </div>
+      <div class="feedback__content white flex dc">
+        <div class="feedback__head flex dc">
+          <p class="feedback__title h2">
+            Не нашли ответ?
+            <br>
+            Напишите нам — мы поможем
+          </p>
+          <p class="txt24">
+            Иногда вопросы бывают слишком личными или&nbsp;специфичными для&nbsp;статей. Мы&nbsp;читаем каждое сообщение и&nbsp;постараемся ответить
+            в&nbsp;течение 2–3&nbsp;дней.
+          </p>
+        </div>
+
+        <button class="feedback__btn btn-primary txt20"><span>Задать вопрос</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__inner flex dc">
+      <div class="footer__top flex dc">
+        <div class="footer__info flex cv sb">
+          <a href="#" class="footer__logo logo" data-da=".footer__btn-box, 768, first">
+            <img src="./assets/images/logo.webp" alt="">
+          </a>
+          <nav class="footer__nav">
+            <ul class="footer__list txt20 flex cv">
+              <li>
+                <a href="#" class="footer__link">Статьи</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Советы</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Акция</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">Помощь</a>
+              </li>
+              <li>
+                <a href="#" class="footer__link">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="footer__btn-box flex cv">
+            <!-- <button class="footer__btn btn-primary btn-primary--accent txt20"><span>Личный кабинет</span></button> -->
+          </div>
+        </div>
+        <div class="footer__policy flex dc txt18 grey">
+          <ul class="footer__policy-list flex-cc">
+            <li>
+              <a href="#">Обработка персональных данных</a>
+            </li>
+            <li>
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
+          <ul class="footer__policy-list flex-cc">
+            <li>
+              <span>©&nbsp;2025 Все права защищены</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__disclaimer">
+        <img src="./assets/images/disclaimer.svg" alt="">
+      </div>
     </div>
   </div>
 </footer>
 
-  </div>
-</body>
-
+      <div class="fancybox-bg"></div>
+    </div>
+  </body>
 </html>

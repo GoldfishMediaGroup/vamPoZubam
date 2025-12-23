@@ -1,0 +1,226 @@
+.hero {
+  @include small-tablet {
+  }
+  // .hero__container
+
+  &__container {
+  }
+
+  // .hero__inner
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1209rem 595rem;
+    gap: 20rem;
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+  }
+
+  // .hero__swiper-box
+
+  &__swiper-box {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    height: 100%;
+    position: relative;
+    @include small-tablet {
+      order: 1;
+    }
+  }
+
+  // .hero__swiper
+
+  &__swiper {
+    height: 100% !important;
+    & .swiper-wrapper {
+      height: 100% !important;
+    }
+  }
+
+  // .hero__slide
+
+  &__slide {
+    background: $accentgradient;
+    padding: 32rem 48rem 48rem;
+    border-radius: 20rem;
+    height: 100% !important;
+    overflow: hidden;
+    @include small-tablet {
+      padding: 20rem 12rem 30rem 16rem;
+      border-radius: 16rem;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url(./assets/images/heroSwiperBg.webp) no-repeat top/cover;
+      mix-blend-mode: multiply;
+      @include small-tablet {
+      }
+    }
+  }
+
+  // .hero__slide-bg
+
+  &__slide-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  // .hero__content
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    gap: 24rem;
+    @include small-tablet {
+      justify-content: space-between;
+      min-height: 478rem;
+    }
+  }
+
+  // .hero__head
+
+  &__head {
+    gap: 12rem;
+    @include desk-only {
+      flex-grow: 1;
+      justify-content: space-between;
+      & .h1 {
+        width: 652rem;
+      }
+      & .txt24 {
+        width: 569rem;
+      }
+    }
+    @include small-tablet {
+      & .txt24 {
+        font-size: 16rem;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 21rem 77.5rem;
+    @include small-tablet {
+      width: 100%;
+      padding: 12rem;
+    }
+  }
+
+  // .hero__nav-box
+
+  &__nav-box {
+    position: absolute;
+    right: 45rem;
+    bottom: 32rem;
+    z-index: 10;
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  // .hero__swiper-btn
+
+  &__swiper-btn {
+  }
+
+  // .hero__swiper-btn--next
+
+  &__swiper-btn--next {
+  }
+
+  // .hero__pagination
+
+  &__pagination {
+  }
+  &__small-banner {
+    position: relative;
+    min-height: 389rem;
+    grid-column: 2/3;
+    padding: 32rem 40rem;
+    display: flex;
+    @include small-tablet {
+      min-height: 189rem;
+      padding: 16rem;
+    }
+  }
+  &__small-banner-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: 16rem;
+    overflow: hidden;
+  }
+
+  // .hero__gift-box
+
+  &__gift-box {
+    grid-row: 1/2;
+    @include small-tablet {
+      order: 3;
+    }
+  }
+
+  // .hero__gift-bg
+
+  &__gift-bg {
+    background: $accentgradient;
+  }
+
+  // .hero__gift-content
+
+  &__gift-content {
+    position: relative;
+    z-index: 10;
+    flex-grow: 1;
+
+    gap: 12rem;
+    @include small-tablet {
+      gap: 8rem;
+    }
+  }
+
+  // .hero__gift-billet
+
+  &__gift-billet {
+    padding: 11rem 36.5rem;
+    background: #eb008b;
+    border-radius: 250rem;
+    width: fit-content;
+    @include small-tablet {
+      padding: 5rem 24rem;
+    }
+  }
+
+  // .hero__garanty-box
+
+  &__garanty-box {
+    grid-row: 2/3;
+    @include small-tablet {
+      order: 2;
+    }
+  }
+
+  // .hero__garanty-bg
+
+  &__garanty-bg {
+    background: $asideGradient;
+  }
+
+  // .hero__garanty-content
+
+  &__garanty-content {
+    position: relative;
+    z-index: 10;
+    gap: 12rem;
+    @include small-tablet {
+      gap: 8rem;
+    }
+  }
+}

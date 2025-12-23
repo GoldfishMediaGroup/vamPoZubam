@@ -1,172 +1,196 @@
 .btn-primary {
-    padding: 20rem 24rem;
-    border-radius: 40rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $accent;
-    background: $white;
-    width: fit-content;
+  padding: 20rem 24rem;
+  border-radius: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $accent;
+  background: $white;
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    
+    width: 10rem;
+    filter: blur(14rem);
+    height: 300%;
+    background: $blickAccent;
 
+    transform: rotate(40deg);
+  }
+  &:hover {
+    &::after {
+      transition: left 0.8s ease-out;
+      left: 105%;
+    }
+  }
+  & span {
+    background: linear-gradient(133deg, #00909a 0%, #3cc7cd 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 2;
+  }
 
+  &--accent {
+    color: $white;
+    position: relative;
+    &::after {
+      background: $blickWhite;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: $accentgradient;
+    }
 
     & span {
-        background: linear-gradient(133deg, #00909a 0%, #3cc7cd 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        position: relative;
-        z-index: 2;
+      background: transparent;
+      background-clip: unset;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+      color: $white;
     }
-
-    &--accent {
-        // background: $accentgradient;
-        color: $white;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            background: $accentgradient;
-        }
-
-        & span {
-            background: transparent;
-            background-clip: unset;
-            -webkit-background-clip: unset;
-            -webkit-text-fill-color: unset;
-            color: $white;
-        }
-    }
+  }
 }
 
 .swiper-button {
-    margin: 0 !important;
-    width: 68rem !important;
-    height: 68rem !important;
+  margin: 0 !important;
+  width: 68rem !important;
+  height: 68rem !important;
+  border-radius: 50%;
+  background: $white;
+  position: relative !important;
+  inset: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  &-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  &--prev {
+    & .swiper-button__svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '' !important;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+
+  &::before {
+    background: url(./assets/images/swiperBg.svg) no-repeat top/cover;
+  }
+
+  &::after {
+    background: url(./assets/images/swiperBgHover.svg) no-repeat top/cover;
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+
+    & .noHover {
+      opacity: 0;
+    }
+
+    & .hover {
+      opacity: 1;
+    }
+  }
+
+  @include small-tablet {
+    display: none;
+  }
+
+  &__svg {
+    width: 24rem !important;
+    height: 24rem !important;
+    position: relative;
+    z-index: 4;
+
+    & img {
+      position: absolute;
+      inset: 0;
+      transition: opacity 0.3s;
+
+      &.noHover {
+        opacity: 1;
+      }
+
+      &.hover {
+        opacity: 0;
+      }
+    }
+
+    @include small-tablet {
+    }
+  }
+}
+
+.link-primary {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+  &:hover {
+    & .link-primary__svg {
+      transform: translateX(6rem);
+    }
+  }
+
+  @include small-tablet {
+    gap: 8rem;
+  }
+
+  // .link-primary__text
+
+  &__text {
+  }
+
+  // .link-primary__svg-box
+
+  &__svg-box {
+    width: 68rem;
+    height: 68rem;
     border-radius: 50%;
     background: $white;
-    position: relative !important;
-    inset: 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &--prev {
-        & .swiper-button__svg {
-            transform: rotate(180deg);
-        }
-    }
-
-    &::before,
-    &::after {
-        content: '' !important;
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-
-    }
-
-
-    &::before {
-        background: url(../../assets/images/swiperBg.svg) no-repeat top/cover;
-    }
-
-    &::after {
-        background: url(../../assets/images/swiperBgHover.svg) no-repeat top/cover;
-        transition: opacity 0.3s;
-        opacity: 0;
-    }
-
-    &:hover {
-        &::after {
-            opacity: 1;
-        }
-
-        & .noHover {
-            opacity: 0;
-        }
-
-        & .hover {
-            opacity: 1;
-        }
-    }
-
     @include small-tablet {
-        display: none;
+      width: 36rem;
+      height: 36rem;
     }
+  }
 
+  // .link-primary__svg
 
-
-    &__svg {
-        width: 24rem !important;
-        height: 24rem !important;
-        position: relative;
-        z-index: 4;
-
-        & img {
-            position: absolute;
-            inset: 0;
-            transition: opacity 0.3s;
-
-            &.noHover {
-                opacity: 1;
-            }
-
-            &.hover {
-                opacity: 0;
-            }
-        }
-
-
-        @include small-tablet {}
-    }
-}
-
-.link-primary {
-    display: flex;
-    align-items: center;
-    gap: 16rem;
-    &:hover {
-       & .link-primary__svg {
-        transform: translateX(6rem);
-       } 
-    }
-
-    @include small-tablet {
-        gap: 8rem;
-    }
-
-    // .link-primary__text
-
-    &__text {}
-
-    // .link-primary__svg-box
-
-    &__svg-box {
-        width: 68rem;
-        height: 68rem;
-        border-radius: 50%;
-        background: $white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        @include small-tablet {
-            width: 36rem;
-            height: 36rem;
-        }
-    }
-
-    // .link-primary__svg
-
-    &__svg {
-        width: 24rem;
-        height: 24rem;
-        transition: transform 0.3s;
-    }
+  &__svg {
+    width: 24rem;
+    height: 24rem;
+    transition: transform 0.3s;
+      @include small-tablet {
+    width: 14rem;
+    height: 14rem;
+  }
+  }
 }
 
 // .swiper-pagination {
@@ -185,6 +209,6 @@
 //       & .swiper-pagination-bullet-active {
 //         background: $text-primary;
 //       }
-    
+
 //   }
 // }

@@ -7,6 +7,17 @@ $lightbg: #f6f6f6;
 $white: #fff;
 $accent: #318e88;
 $accentgradient: linear-gradient(133deg, #00909a 0%, #3cc7cd 100%);
+$asideGradient: linear-gradient(
+  130deg,
+  #b07a37 0.09%,
+
+  #f7e9cb 40%,
+  #f7e9cb 60%,
+  #b07a37 100%
+);
+$blickWhite: rgba(255, 255, 255, 0.8);
+$blickAccent: rgb(124, 248, 244);
+$fancyboxBg: rgba(15, 52, 51, 0.368);
 
 body {
   color: $dark;
@@ -22,10 +33,6 @@ body {
     overflow: hidden !important;
     touch-action: none !important;
     width: 100vw;
-
-    & main {
-      opacity: 0;
-    }
   }
 }
 
@@ -47,12 +54,14 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 140rem;
-  padding: 32rem 0 60rem;
+  gap: 57rem;
+  // margin-top: 170rem;
+  margin-top: 37rem;
 
   @include small-tablet {
-    gap: 56rem;
-    padding: 18rem 0 56rem;
+    // margin-top: 82rem;
+    gap: 50rem;
+    margin-top: 12rem;
   }
 }
 
@@ -87,8 +96,16 @@ main {
   align-items: center;
 }
 
+.ch {
+  justify-content: center;
+}
+
 .ev {
   align-items: flex-end;
+}
+
+.sv {
+  align-items: flex-start;
 }
 
 .sb {

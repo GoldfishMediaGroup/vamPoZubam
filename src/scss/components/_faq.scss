@@ -1,0 +1,157 @@
+.faq {
+  // .faq__container
+
+  &__container {
+  }
+
+  // .faq__inner
+
+  &__inner {
+    padding: 64rem 48rem;
+    border-radius: 20rem;
+    background: $white;
+    position: relative;
+    gap: 20rem;
+    @include small-tablet {
+      flex-direction: column;
+      padding: 16rem;
+      border-radius: 16rem;
+    }
+  }
+
+  // .faq__faq
+
+  &__faq {
+    width: 1160rem;
+    flex-shrink: 0;
+    gap: 48rem;
+    @include small-tablet {
+      width: 100%;
+      gap: 20rem;
+    }
+    // justify-content: space-between;
+  }
+
+  // .faq__title
+
+  &__title {
+  }
+
+  // .faq__accordion
+
+  &__accordion {
+    gap: 16rem;
+    @include small-tablet {
+      gap: 8rem;
+    }
+  }
+
+  // .faq__item
+
+  &__item {
+    padding: 12rem 16rem;
+    border-radius: 12rem;
+    background: $lightbg;
+    cursor: pointer;
+
+    @include small-tablet {
+      padding: 8rem 16rem;
+
+      & .txt20 {
+        font-size: 10rem;
+      }
+    }
+    &.isActive {
+      & .faq__plus {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  // .faq__head
+
+  &__head {
+  }
+
+  // .faq__plus
+
+  &__plus {
+    width: 56rem;
+    height: 56rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    @include small-tablet {
+      height: 40rem;
+    }
+
+    & img {
+      width: 28rem;
+      height: 28rem;
+    }
+  }
+
+  // .faq__info
+
+  &__info {
+    display: none;
+    margin-top: 10rem;
+    width: 900rem;
+
+    @include small-tablet {
+      width: 100%;
+      margin-top: 6rem;
+    }
+  }
+
+  // .faq__aside
+
+  &__aside {
+    height: fit-content;
+    position: sticky;
+    // top: 150rem;
+    top: 64rem;
+    border-radius: 20rem;
+    gap: 20rem;
+    padding: 34rem;
+    background: $asideGradient;
+    @include small-tablet {
+      position: static;
+      padding: 18rem 20rem;
+      gap: 16rem;
+      border-radius: 12rem;
+    }
+  }
+
+  // .faq__aside-list
+
+  &__aside-list {
+    gap: 20rem;
+    @include small-tablet {
+      gap: 10rem;
+    }
+  }
+
+  // .faq__aside-link
+
+  &__aside-link {
+    display: block;
+    width: 479rem;
+    height: 188rem;
+    border-radius: 12rem;
+    background: rgba(244, 244, 244, 0.41);
+    border: 0.75rem solid $white;  padding: 66rem;
+    @include small-tablet {
+      width: 272rem;
+      height: 107rem;
+      border-radius: 7rem;
+      border: 0.43rem solid $white;
+      padding: 38rem;
+    }
+    & img {
+      object-fit: scale-down;
+    }
+  }
+}
