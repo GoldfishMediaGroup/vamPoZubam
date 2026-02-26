@@ -16,7 +16,7 @@
     overflow: hidden;
     @include small-tablet {
       border-radius: 16rem;
-      padding: 16rem;
+      padding: 16rem 12rem;
       display: flex;
       flex-direction: column;
       gap: 20rem;
@@ -58,7 +58,7 @@
   &__btn {
     padding: 21rem 54rem;
     @include small-tablet {
-      padding: 12rem;
+      padding: 15rem;
       width: 100%;
     }
   }
@@ -84,6 +84,17 @@
   // .articles__swiper-box
 
   &__swiper-box {
+    position: relative;
+    @include small-tablet {
+      padding-bottom: 40rem;
+      margin-bottom: -20rem;
+    }
+  }
+
+  &__pagin {
+    @include desk-only {
+      display: none;
+    }
   }
 
   // .articles__swiper
@@ -150,6 +161,10 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    width: 408rem;
+    @include small-tablet {
+      width: 100%;
+    }
   }
 
   // .article__link

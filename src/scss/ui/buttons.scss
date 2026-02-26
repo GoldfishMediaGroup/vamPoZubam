@@ -37,6 +37,10 @@
     z-index: 2;
   }
 
+  @include small-tablet {
+       font-size: 16rem;
+  }
+
   &--accent {
     color: $white;
     position: relative;

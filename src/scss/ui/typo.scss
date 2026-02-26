@@ -42,7 +42,6 @@
   }
 }
 
-
 .txt24 {
   font-weight: 500;
   font-size: 24rem;
@@ -76,6 +75,15 @@
   }
 }
 
+.txt16 {
+  font-weight: 500;
+  font-size: 16rem;
+  line-height: 140%;
+  @include small-tablet {
+    font-size: 14rem;
+    line-height: 180%;
+  }
+}
 
 .light {
   font-weight: 300 !important;

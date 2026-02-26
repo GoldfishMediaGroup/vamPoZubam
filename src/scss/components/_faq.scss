@@ -14,7 +14,7 @@
     gap: 20rem;
     @include small-tablet {
       flex-direction: column;
-      padding: 16rem;
+      padding: 16rem 12rem;
       border-radius: 16rem;
     }
   }
@@ -142,7 +142,8 @@
     height: 188rem;
     border-radius: 12rem;
     background: rgba(244, 244, 244, 0.41);
-    border: 0.75rem solid $white;  padding: 66rem;
+    border: 0.75rem solid $white;
+    padding: 66rem;
     @include small-tablet {
       width: 272rem;
       height: 107rem;
