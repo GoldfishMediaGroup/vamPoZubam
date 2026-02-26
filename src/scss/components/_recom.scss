@@ -13,7 +13,7 @@
     background: $white;
     gap: 48rem;
     @include small-tablet {
-      padding: 16rem;
+     padding: 16rem 12rem;
       border-radius: 16rem;
       gap: 20rem;
     }

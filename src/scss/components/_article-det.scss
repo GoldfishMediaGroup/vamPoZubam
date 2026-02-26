@@ -1,0 +1,577 @@
+.article-det {
+  // .article-det__container
+
+  &__container {
+  }
+
+  // .article-det__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 57rem;
+    @include small-tablet {
+      gap: 50rem;
+    }
+  }
+
+  & .breadcrumbs {
+    @include desk-only {
+      width: 764rem;
+    }
+  }
+}
+
+.article-hero,
+.article-contents,
+.article-body,
+.article-authors,
+.article-bibliography,
+.article-like {
+  border-radius: 20rem;
+  padding: 56rem 48rem;
+  background: $white;
+  @include small-tablet {
+    border-radius: 16rem;
+    padding: 16rem 12rem;
+  }
+}
+.article-contents,
+.article-body,
+.article-authors,
+.article-bibliography {
+  @include desk-only {
+    padding-right: 595rem;
+  }
+}
+
+.article-hero {
+  display: grid;
+  grid-template-columns: auto 777rem;
+  gap: 96rem;
+  @include small-tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+  }
+
+  // .article-hero__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 100rem;
+    @include small-tablet {
+      gap: 12rem;
+    }
+  }
+
+  // .article-hero__info
+
+  &__info {
+    flex-grow: 1;
+    @include small-tablet {
+      gap: 24rem;
+    }
+  }
+
+  // .article-hero__billets
+
+  &__billets {
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+    @include small-tablet {
+      flex-direction: column;
+      gap: 8rem;
+      align-items: flex-start;
+    }
+  }
+
+  // .article-hero__billet
+
+  &__billet {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    border-radius: 60rem;
+    padding: 12rem 16rem 12rem 20rem;
+    background: $lightbg;
+    @include small-tablet {
+      padding: 8rem 8rem 8rem 12rem;
+    }
+  }
+
+  // .article-hero__svg
+
+  &__svg {
+    width: 24rem;
+    height: 24rem;
+    @include small-tablet {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  // .article-hero__img
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    min-height: 560rem;
+    border-radius: 10rem;
+    overflow: hidden;
+    position: relative;
+    @include small-tablet {
+      height: 229rem;
+      min-height: unset;
+    }
+    & img {
+      position: absolute;
+      inset: 0;
+    }
+  }
+}
+
+.article-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  // .article-contents__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+    @include small-tablet {
+      gap: 16rem;
+    }
+
+    & ul {
+      margin-top: 24rem;
+      display: flex;
+      flex-direction: column;
+      gap: 24rem;
+      @include small-tablet {
+        gap: 16rem;
+      }
+    }
+    & ul li {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+}
+
+.article-body {
+  & h2 {
+    margin: 60rem 0 20rem;
+    font-weight: 600;
+    font-size: 44rem;
+    line-height: 136%;
+
+    @include small-tablet {
+      font-size: 26rem;
+      line-height: 123%;
+      margin: 24rem 0 16rem;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    margin: 32rem 0 20rem;
+    font-weight: 700;
+    font-size: 32rem;
+    line-height: 138%;
+    &:first-child {
+      margin-top: 0;
+    }
+    @include small-tablet {
+      font-size: 14rem;
+      line-height: 143%;
+      margin: 24rem 0 12rem;
+    }
+  }
+
+  & p {
+    margin: 20rem 0;
+    @include small-tablet {
+      margin: 16rem 0;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+    margin: 20rem 0;
+    @include small-tablet {
+      margin: 12rem 0;
+      gap: 12rem;
+    }
+    & ol {
+      list-style-type: decimal; // цифры для нумерованного списка
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16rem;
+      @include small-tablet {
+        margin: 0;
+        gap: 12rem;
+      }
+
+      & li {
+        list-style-type: decimal;
+      }
+    }
+    & > li {
+      list-style-type: none; // Отключаем глючный стандарт
+      position: relative;
+      padding-left: 22rem; // Место под точку
+      display: flex;
+      flex-direction: column;
+      @include small-tablet {
+        padding-left: 12rem;
+      }
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 1.5;
+      }
+
+      & b {
+        margin-bottom: 12rem;
+        font-weight: 600;
+        display: inline-block;
+        max-width: calc(100% - 50rem);
+
+        @include small-tablet {
+          margin-bottom: 10rem;
+        }
+      }
+    }
+    //   & > li {
+    //     position: relative;
+
+    //     &::before {
+    //       position: absolute;
+    //       top: 2rem;
+    //       content: '•'; /* Рисуем маркер вручную */
+    //       font-size: 24rem;
+    //       @include small-tablet {
+    //         font-size: 16rem;
+    //       }
+
+    //       flex-shrink: 0; /* Чтобы точка не сжималась */
+    //     }
+
+    //     & .content-wrapper {
+    //       /* Оберни всё внутри li в div или span */
+    //       display: flex;
+    //       flex-direction: column;
+    //     }
+
+    //     & b {
+    //       display: block; /* Теперь margin-bottom будет работать идеально */
+    //       margin-bottom: 12rem;
+    //       font-weight: 600;
+    //       margin-left: 20rem;
+    //     }
+    //   }
+  }
+
+  & img {
+    width: 100%;
+    height: 560rem;
+
+    border-radius: 10rem;
+    @include small-tablet {
+      height: 152rem;
+      border-radius: 8rem;
+    }
+    &.img-min {
+      width: 575rem;
+      @include small-tablet {
+        width: 154rem;
+      }
+
+      display: inline-block;
+      & + .img-min {
+        margin-left: 20rem;
+        @include small-tablet {
+          margin-left: 5rem;
+        }
+      }
+    }
+  }
+
+  & .important {
+    color: $white;
+    border-radius: 12rem;
+    padding: 32rem 24rem;
+    background: $accentgradient;
+  }
+}
+
+.article-authors {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  // .article-authors__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20rem;
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+    }
+  }
+
+  // .article-authors__item
+
+  &__item {
+    background: $lightbg;
+    border-radius: 12rem;
+    padding: 24rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+    &:nth-child(odd):last-child {
+      grid-column: 1 / span 2; /* Растягиваем его на 2 колонки */
+    }
+    @include small-tablet {
+      border-radius: 8rem;
+      padding: 12rem;
+      gap: 12rem;
+    }
+  }
+
+  // .article-authors__head
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 16rem;
+    @include small-tablet {
+      gap: 12rem;
+    }
+  }
+
+  // .article-authors__photo
+
+  &__photo {
+    border-radius: 100rem;
+    width: 68rem;
+    height: 68rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    @include small-tablet {
+      width: 54rem;
+      height: 54rem;
+    }
+  }
+
+  // .article-authors__info
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  // .article-authors__pos
+
+  &__pos {
+    color: $grey;
+    font-weight: 500;
+  }
+
+  // .article-authors__name
+
+  &__name {
+    @include small-tablet {
+      font-size: 16rem;
+    }
+  }
+
+  // .article-authors__desc
+
+  &__desc {
+    margin-left: 86rem;
+    color: #898b93;
+    @include small-tablet {
+      margin-left: 0;
+      line-height: 143%;
+    }
+  }
+}
+
+.article-bibliography {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  &__list-box {
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 12rem;
+      &.isActive {
+        & .article-bibliography__more-text {
+          & span {
+            &:nth-child(1) {
+              position: absolute;
+              opacity: 0;
+            }
+            &:nth-child(2) {
+              position: relative;
+              opacity: 1;
+            }
+          }
+        }
+
+        & .article-bibliography__more-svg {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+    padding: 0 0 0 30rem;
+    margin: 0;
+    @include small-tablet {
+      transition: all 0.8s;
+      gap: 8rem;
+    }
+    & li {
+    }
+  }
+  // .article-bibliography__more
+
+  &__more {
+    display: none;
+
+    @include small-tablet {
+      display: flex;
+      align-items: center;
+      gap: 8rem;
+    }
+  }
+
+  // .article-bibliography__more-text
+
+  &__more-text {
+    position: relative;
+
+    & span {
+      white-space: nowrap;
+      left: 0;
+      transition: opacity 0.3s;
+      &:nth-child(1) {
+        position: relative;
+        opacity: 1;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        opacity: 0;
+      }
+    }
+  }
+
+  // .article-bibliography__more-svg-box
+
+  &__more-svg-box {
+    width: 44rem;
+    height: 44rem;
+
+    border-radius: 50%;
+    background: $lightbg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .article-bibliography__more-svg
+
+  &__more-svg {
+    transition: transform 0.8s;
+    transform: rotate(90deg);
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+.article-like {
+  // .article-like__head
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 48rem;
+  @include small-tablet {
+    gap: 24rem;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .article-like__nav-box
+
+  &__nav-box {
+  }
+
+  // .article-like__swiper-btn
+
+  &__swiper-btn {
+  }
+
+  // .article-like__swiper-btn--next
+
+  &__swiper-btn--next {
+  }
+
+  // .article-like__swiper-box
+
+  &__swiper-box {
+    position: relative;
+    padding-bottom: 40rem;
+    margin-bottom: -10rem;
+  }
+
+  // .article-like__swiper
+
+  &__swiper {
+    overflow: visible !important;
+  }
+
+  // .article-like__swiper-wrapper
+
+  &__swiper-wrapper {
+  }
+
+  // .article-like__slide
+
+  &__slide {
+  }
+
+  // .article-like__pagin
+
+  &__pagin {
+    @include desk-only {
+      display: none;
+    }
+  }
+}

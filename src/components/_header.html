@@ -4,39 +4,43 @@
       <a href="#" class="header__logo logo">
         <img src="./assets/images/logo.webp" alt="" />
       </a>
-      <nav class="header__nav " data-da=".header__container, 768, last">
-        <ul class="header__list flex cv txt20">
-          <li>
-            <a class="header__link">Статьи</a>
-          </li>
-          <li>
-            <a class="header__link">Советы</a>
-          </li>
-          <li>
-            <a class="header__link">Помощь</a>
-          </li>
-          <li>
-            <a class="header__link">Акция</a>
-          </li>
-          <li>
-            <a class="header__link">FAQ</a>
-          </li>
-        </ul>
+      <nav class="header__nav" data-da=".header__container, 768, last">
+        <div class="header__list-box flex dc">
+          <ul class="header__list flex cv txt20">
+            <li>
+              <a class="header__link isActive">Статьи</a>
+            </li>
+            <li>
+              <a class="header__link">Советы</a>
+            </li>
+            <li>
+              <a class="header__link">Помощь</a>
+            </li>
+            <li>
+              <a class="header__link">Акция</a>
+            </li>
+            <li>
+              <a class="header__link">FAQ</a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
-      <div class="header__btn-box flex cv ">
-        <!-- <div class="header__search-box">
+      <div class="header__btn-box flex cv">
+        <div class="header__search-box">
           <button class="header__search header__btn">
             <img src="./assets/images/search.svg" alt="" />
           </button>
         </div>
         <div class="header__lk-box">
-          <button class="header__lk-desk btn-primary btn-primary--accent txt18"><span>Личный кабинет</span></button>
-       
+          <button class="header__lk-desk btn-primary btn-primary--accent txt18" data-da=".header__list-box, 768, last">
+            <span>Личный кабинет</span>
+          </button>
+
           <button class="header__lk-mob header__btn">
             <img src="./assets/images/login.svg" alt="" />
           </button>
-        </div> -->
+        </div>
 
         <button class="header__burger header__btn">
           <img class="close" src="./assets/images/burgerClose.svg" alt="" />

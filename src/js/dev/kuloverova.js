@@ -19,14 +19,20 @@ import faqAccordion from '../components/faqAccordion';
 import recom from '../components/recom';
 import articles from '../components/articles';
 import hero from '../components/hero';
+import showMoreMob from '../utils/showMoreMob';
+import articleDet from '../components/articleDet';
 
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
   scroll();
-  fancybox()
+  fancybox();
   headerBurger();
   faqAccordion();
-  recom()
-  articles()
-  hero()
+  recom();
+  articles();
+  articleDet();
+  hero();
+  try {
+    showMoreMob('.article-bibliography__list', 461, '220rem', '.article-bibliography__more');
+  } catch {}
 });

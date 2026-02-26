@@ -56,12 +56,12 @@ main {
   flex-direction: column;
   gap: 57rem;
   // margin-top: 170rem;
-  margin-top: 37rem;
+  margin-top: 172rem;
 
   @include small-tablet {
     // margin-top: 82rem;
     gap: 50rem;
-    margin-top: 12rem;
+    margin-top: 82rem;
   }
 }
 

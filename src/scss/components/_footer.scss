@@ -21,6 +21,7 @@
     @include small-tablet {
       border-radius: 16rem;
       padding: 16rem;
+      gap: 16rem;
     }
   }
 
@@ -40,15 +41,23 @@
   &__info {
     gap: 10rem;
     @include small-tablet {
-      flex-direction: column-reverse;
       align-items: flex-start;
-      gap: 18rem;
+      flex-direction: column;
+      gap: 16rem;
     }
   }
 
   // .footer__nav
 
   &__nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include small-tablet {
+      width: 100%;
+      position: static;
+      transform: translateX(0);
+    }
   }
 
   // .footer__list
@@ -56,9 +65,9 @@
   &__list {
     gap: 80rem;
     @include small-tablet {
-      flex-wrap: wrap;
-      gap: 4rem 20rem;
-      width: 200rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12rem;
     }
   }
 
@@ -98,7 +107,8 @@
   &__btn {
     padding: 17rem 29rem;
     @include small-tablet {
-      padding: 4rem 12rem;
+      padding: 15rem;
+      width: 100%;
     }
   }
 

@@ -17,13 +17,14 @@ function articles() {
         spaceBetween: rem(2)
       }
     },
-       navigation: {
+    pagination: {
+      el: '.articles__pagin'
+    },
+    navigation: {
       prevEl: section.querySelector('.swiper-button--prev'),
       nextEl: section.querySelector('.swiper-button--next')
     }
   });
-
- 
 }
 
 export default articles;
