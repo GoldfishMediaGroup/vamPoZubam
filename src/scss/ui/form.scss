@@ -1,208 +1,263 @@
-// .form {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 32rem;
-//   @include small-tablet {
-//     gap: 20rem;
-//   }
-//   &__title {
-//     width: 480rem;
-//     @include small-tablet {
-//       width: 100%;
-//     }
-//   }
+.form {
+  // .form__label-box
 
-//   &__content {
-//     display: flex;’
-//     flex-direction: column;
-//     gap: 40rem;
-//     @include small-tablet {
-//       gap: 24rem;
-//     }
-//   }
-//   &__btn-box {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     gap: 20rem;
-//     @include small-tablet {
-//       flex-direction: column;
-//       gap: 20rem;
-//     }
-//   }
+  &__label-box {
+  }
 
-//   &__input-box {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 32rem;
-//     @include small-tablet {
-//       gap: 20rem;
-//     }
-//   }
-//   &__label {
-//     position: relative;
-//     width: 100%;
-//     display: block;
-//   }
-//   &__label-inner {
-//     width: 100%;
-//     transition: padding 0.3s;
-//     display: flex;
-//     flex-direction: column-reverse;
-//     gap: 3rem;
-//     @include small-tablet {
-//       gap: 2rem;
-//     }
+  // .form__label
 
-//     &._form-error {
-//       & ~ .form__error {
-//         visibility: visible;
-//         opacity: 1;
-//         line-height: normal;
-//       }
-//     }
-//   }
+  &__label {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
 
-//   &__input {
-//     width: 100%;
-//     padding: 23rem 24rem;
-//     color: $black;
-//     background: $gray-light;
-//     border-radius: 48rem;
-//     @include small-tablet {
-//       padding: 16rem;
-//     }
-//     &::placeholder {
-//       color: $gray-txt;
-//     }
-//   }
-//   &__placeholder {
-//     padding-left: 24rem;
-//     @include small-tablet {
-//       padding-left: 16rem;
-//     }
-//   }
-//   //   &__textarea-wrap {
-//   //     position: relative;
-//   //     padding: 18rem 20rem;
+  // .form__label-inner
 
-//   //     border: 2rem solid $tertiary-text;
-//   //     height: 140rem;
-//   //     @include small-tablet {
-//   //       padding: 18rem 16rem;
-//   //     }
-//   //   }
-//   //   &__textarea {
-//   //     resize: none;
-//   //     width: 100%;
-//   //     height: 100%;
-//   //     color: $text-primary;
-//   //     &::placeholder {
-//   //       color: $tertiary-text;
-//   //     }
+  &__label-inner {
+    width: 100%;
+    display: flex;
+    // transition: padding 0.3s;
+    // flex-direction: column-reverse;
+    // gap: 10rem;
+    // @include small-tablet {
+    //   gap: 4rem;
+    // }
+    &._form-error {
+      & input,
+      & ~ .form__error {
+        visibility: visible;
+        opacity: 1;
+        line-height: normal;
+      }
+    }
+  }
 
-//   //     &::-webkit-scrollbar,
-//   //     &::-webkit-scrollbar-thumb,
-//   //     &::-webkit-scrollbar-track {
-//   //       display: none;
-//   //     }
-//   //   }
+  // .form__input
 
-//   //   &__textarea-count {
-//   //     position: absolute;
-//   //     z-index: 5;
-//   //     bottom: 20rem;
-//   //     right: 20rem;
-//   //     opacity: 0;
-//   //     &.active {
-//   //       opacity: 1;
-//   //     }
-//   //     @include small-tablet {
-//   //       bottom: 16rem;
-//   //       right: 16rem;
-//   //     }
-//   //   }
+  &__input {
+    width: 100%;
+    border-radius: 12rem;
+    padding: 12rem 16rem 12rem 20rem;
+    font-weight: 500;
+    font-size: 24rem;
+    line-height: 150%;
+    color: $grey;
+    background: $lightbg;
+    border: 1rem solid transparent;
 
-//   &__error {
-//     position: absolute;
-//     bottom: -20rem;
-//     left: 24rem;
-//     color: red;
-//     font-weight: 400;
-//     line-height: 140%;
-//     visibility: hidden;
-//     opacity: 0;
-//     text-transform: none;
-//     transition: opacity 0.3s, visibility 0.3s;
-//     &.active {
-//       visibility: visible;
-//       opacity: 1;
-//       line-height: normal;
-//     }
+    // color: $black;
 
-//     @include small-tablet {
-//       left: 16rem;   bottom: -16rem;
-//     }
-//   }
+    cursor: text;
 
-//   &__check-label {
-//     display: flex;
-//     gap: 12rem;
-//     position: relative;
-//     cursor: pointer;
-//     width: 415rem;
-//     @include small-tablet {
-//       width: 100%;   
-//     }
-//     & input {
-//       position: absolute;
-//       opacity: 0;
-//       display: block;
-//       z-index: -1;
-//       &:checked {
-//         & ~ .form__check-square {
-//           background: $black;
-//           &:before {
-//             scale: 1;
-//           }
-//         }
-//       }
-//     }
+    &::placeholder {
+      color: $grey;
+    }
 
+    &:focus,
+    &:active,
+    &:not(:placeholder-shown) {
+      & + .form__placeholder {
+        scale: 0.7;
+        top: -24rem;
+        color: $dark;
+        @include small-tablet {
+          top: -12rem;
+        }
+      }
+    }
 
-//     & a {
-//       text-decoration: underline;
-//     }
-//   }
+    @include small-tablet {
+      padding: 12rem 16rem;
+      min-height: 52rem;
+      font-size: 14rem;
+      line-height: 140%;
+    }
+  }
 
-//   &__check-square {
-//     flex-shrink: 0;
-//     border: 1.8px solid $black;
-//     background: transparent;
-//     border-radius: 4rem;
-//     width: 28rem;
-//     height: 28rem;
-//     position: relative;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     transition: background 0.3s;
-//     pointer-events: none;
-//     @include small-tablet {
-//       width: 20rem;
-//       height: 20rem;
-//     }
-//     &::before {
-//       position: absolute;
-//       content: '';
-//       scale: 0;
-//       transform-origin: center center;
-//       transition: scale 0.3s;
-//       width: 100%;
-//       height: 100%;
-//       background: url(./assets/images/checked.svg) no-repeat top/cover;
-//       @include small-tablet {
-//       }
-//     }
-//   }
-// }
+  // .form__placeholder
+
+  &__placeholder {
+    position: absolute;
+    left: 24rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 400;
+    font-weight: 500;
+    font-size: 24rem;
+    line-height: 150%;
+    color: $grey;
+
+    transition: 0.3s;
+    transform-origin: left center;
+    pointer-events: none;
+    @include small-tablet {
+      font-size: 14rem;
+      left: 12rem;
+      line-height: 140%;
+    }
+  }
+
+  // .form__error
+
+  &__error {
+    position: absolute;
+    bottom: -20rem;
+    left: 24rem;
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 140%;
+    color: $error;
+    visibility: hidden;
+
+    opacity: 0;
+    text-transform: none;
+    transition:
+      opacity 0.3s,
+      visibility 0.3s;
+    @include small-tablet {
+      font-size: 10rem;
+      bottom: -16rem;
+      left: 12rem;
+    }
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      line-height: normal;
+    }
+  }
+
+  // .form__btn-box
+
+  &__btn-box {
+  }
+
+  &__num-box {
+    display: flex;
+    gap: 16rem;
+    width: fit-content;
+    @include small-tablet {
+      gap: 12rem;
+    }
+    & .form__label--num {
+      &._form-error {
+        & input,
+        & ~ .form__label--num input {
+          border: 1rem solid $error;
+        }
+      }
+    }
+    & .input--code {
+      border-radius: 8rem;
+      width: 60rem;
+      height: 80rem;
+      @include small-tablet {
+        width: 48rem;
+        height: 64rem;
+      }
+    }
+  }
+
+  //   &__textarea-wrap {
+  //     position: relative;
+  //     padding: 18rem 20rem;
+
+  //     border: 2rem solid $tertiary-text;
+  //     height: 140rem;
+  //     @include small-tablet {
+  //       padding: 18rem 16rem;
+  //     }
+  //   }
+  //   &__textarea {
+  //     resize: none;
+  //     width: 100%;
+  //     height: 100%;
+  //     color: $text-primary;
+  //     &::placeholder {
+  //       color: $tertiary-text;
+  //     }
+
+  //     &::-webkit-scrollbar,
+  //     &::-webkit-scrollbar-thumb,
+  //     &::-webkit-scrollbar-track {
+  //       display: none;
+  //     }
+  //   }
+
+  //   &__textarea-count {
+  //     position: absolute;
+  //     z-index: 5;
+  //     bottom: 20rem;
+  //     right: 20rem;
+  //     opacity: 0;
+  //     &.active {
+  //       opacity: 1;
+  //     }
+  //     @include small-tablet {
+  //       bottom: 16rem;
+  //       right: 16rem;
+  //     }
+  //   }
+
+  //   &__check-label {
+  //     display: flex;
+  //     gap: 12rem;
+  //     position: relative;
+  //     cursor: pointer;
+  //     & input {
+  //       position: absolute;
+  //       opacity: 0;
+  //       display: block;
+  //       z-index: -1;
+  //       &:checked {
+  //         & ~ .form__check-square {
+  //           background: $accent;
+  //           &:before {
+  //             scale: 1;
+  //           }
+  //         }
+  //       }
+  //     }
+  //     & .txt14 {
+  //       @include small-tablet {
+  //         font-size: 12rem;
+  //       }
+  //     }
+
+  //     & a {
+  //       text-decoration: underline;
+  //     }
+  //   }
+
+  //   &__check-square {
+  //     flex-shrink: 0;
+  //     border: 2rem solid $accent;
+  //     background: transparent;
+  //     width: 24rem;
+  //     height: 24rem;
+  //     position: relative;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     transition: background 0.3s;
+  //     pointer-events: none;
+  //     @include small-tablet {
+  //       width: 20rem;
+  //       height: 20rem;
+  //     }
+  //     &::before {
+  //       position: absolute;
+  //       content: '';
+  //       scale: 0;
+  //       transition: scale 0.3s;
+  //       width: 16rem;
+  //       height: 14rem;
+  //       background: url(./assets/images/checked.svg) no-repeat top/cover;
+  //       @include small-tablet {
+  //         width: 14rem;
+  //         height: 12rem;
+  //       }
+  //     }
+  //   }
+  // }
+}

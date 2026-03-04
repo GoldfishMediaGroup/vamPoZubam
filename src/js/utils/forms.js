@@ -111,7 +111,7 @@ export let formValidate = {
       }
     } else if (formRequiredItem.dataset.required === 'tel') {
       // formRequiredItem.value = formRequiredItem.value.replace(/[^0-9]/g, ''); // Оставить только цифры и символы +()
-      if (!/^\+7 \(\d \d \d\) \d \d \d - \d \d - \d \d$/.test(formRequiredItem.value)) {
+      if (!/^\+\d{1} \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(formRequiredItem.value)) {
 
         this.addError(formRequiredItem);
         error++;
@@ -141,7 +141,7 @@ export let formValidate = {
         this.removeError(formRequiredItem);
       }
     } else if (formRequiredItem.dataset.required === 'name') {
-      if (!/^[a-zA-Zа-яА-Я\s\-]+$/.test(formRequiredItem.value)) {
+      if (!/^[a-zA-Zа-яА-ЯёЁ\s\-]+$/.test(formRequiredItem.value)) {
         this.addError(formRequiredItem);
         error++;
       } else {
@@ -160,6 +160,7 @@ export let formValidate = {
   addError(formRequiredItem) {
     formRequiredItem.classList.add('_form-error');
     formRequiredItem.parentElement.classList.add('_form-error');
+    formRequiredItem.parentElement.parentElement.classList.add('_form-error');
     const error = formRequiredItem.parentElement.parentElement.querySelector('.error-span');
     if (error) {
       error.classList.add('active');
@@ -176,6 +177,7 @@ export let formValidate = {
   removeError(formRequiredItem) {
     formRequiredItem.classList.remove('_form-error');
     formRequiredItem.parentElement.classList.remove('_form-error');
+    formRequiredItem.parentElement.parentElement.classList.remove('_form-error');
     const error = formRequiredItem.parentElement.parentElement.querySelector('.error-span');
     if (error) {
       error.classList.remove('active');

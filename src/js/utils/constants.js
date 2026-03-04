@@ -25,9 +25,9 @@ export let bodyUnlock = (delay = 500) => {
       document.documentElement.classList.remove('lock');
     }, delay);
     bodyLockStatus = false;
-    if (lenis && typeof lenis.start === 'function') {
-      lenis.start();
-    }
+    // if (lenis && typeof lenis.start === 'function') {
+    //   lenis.start();
+    // }
     setTimeout(function () {
       bodyLockStatus = true;
     }, delay);
@@ -46,9 +46,9 @@ export let bodyLock = (delay = 500) => {
     if (cookie) cookie.style.marginRight = `${scrollWith}px`;
     if (disclaimer) disclaimer.style.paddingRight = `${scrollWith}px`;
     document.documentElement.classList.add('lock');
-    if (lenis && typeof lenis.stop === 'function') {
-      lenis.stop();
-    }
+    // if (lenis && typeof lenis.stop === 'function') {
+    //   lenis.stop();
+    // }
     bodyLockStatus = false;
     setTimeout(function () {
       bodyLockStatus = true;
