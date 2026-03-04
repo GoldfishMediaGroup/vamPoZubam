@@ -14,7 +14,7 @@
     position: absolute;
     top: -50%;
     left: -100%;
-    
+
     width: 10rem;
     filter: blur(14rem);
     height: 300%;
@@ -38,12 +38,20 @@
   }
 
   @include small-tablet {
-       font-size: 16rem;
+    font-size: 16rem;
   }
 
   &--accent {
     color: $white;
     position: relative;
+    background: #b9b9b9;
+    &[disabled] {
+      pointer-events: none;
+
+      &::before {
+        opacity: 0;
+      }
+    }
     &::after {
       background: $blickWhite;
     }
@@ -53,6 +61,7 @@
       inset: 0;
       border-radius: inherit;
       background: $accentgradient;
+      transition: opacity 0.6s;
     }
 
     & span {
@@ -190,13 +199,25 @@
     width: 24rem;
     height: 24rem;
     transition: transform 0.3s;
-      @include small-tablet {
-    width: 14rem;
-    height: 14rem;
-  }
+    @include small-tablet {
+      width: 14rem;
+      height: 14rem;
+    }
   }
 }
-
+.link {
+  font-weight: 500;
+  font-size: 20rem;
+  line-height: 160%;
+  color: $dark;
+  border-bottom: 1rem solid $dark;
+  padding: 0rem 0rem 2rem;
+  width: fit-content;
+  @include small-tablet {
+    font-weight: 600;
+    font-size: 16rem;
+  }
+}
 // .swiper-pagination {
 //   @include desk-only {
 //     display: none;

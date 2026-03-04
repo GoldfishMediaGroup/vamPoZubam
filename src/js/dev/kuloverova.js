@@ -5,8 +5,8 @@ window.$ = window.jQuery = require('jquery');
 
 import { rem } from '../utils/constants';
 
-// import popup from '../utils/popup';
-// import form from '../utils/form';
+import popup from '../utils/popup';
+import form from '../utils/form';
 import scroll from '../utils/scroll';
 import fancybox from '../utils/fancybox';
 
@@ -21,9 +21,12 @@ import articles from '../components/articles';
 import hero from '../components/hero';
 import showMoreMob from '../utils/showMoreMob';
 import articleDet from '../components/articleDet';
+import popupRegistration from '../components/popupRegistration';
 
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
+  popup();
+  form();
   scroll();
   fancybox();
   headerBurger();
@@ -32,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   articles();
   articleDet();
   hero();
+  popupRegistration();
   try {
     showMoreMob('.article-bibliography__list', 461, '220rem', '.article-bibliography__more');
   } catch {}

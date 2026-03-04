@@ -15,10 +15,11 @@ $asideGradient: linear-gradient(
   #f7e9cb 60%,
   #b07a37 100%
 );
+
 $blickWhite: rgba(255, 255, 255, 0.8);
 $blickAccent: rgb(124, 248, 244);
 $fancyboxBg: rgba(15, 52, 51, 0.368);
-
+$error: #ca0404;
 body {
   color: $dark;
   background: $lightbg;
