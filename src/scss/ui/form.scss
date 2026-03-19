@@ -28,7 +28,6 @@
       & ~ .form__error {
         visibility: visible;
         opacity: 1;
-        line-height: normal;
       }
     }
   }
@@ -95,6 +94,20 @@
       font-size: 14rem;
       left: 12rem;
       line-height: 140%;
+    }
+  }
+
+  &__input-svg {
+    position: absolute;
+    width: 24rem;
+    height: 24rem;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16rem;
+    @include small-tablet {
+      width: 20rem;
+      height: 20rem;
+      right: 12rem;
     }
   }
 

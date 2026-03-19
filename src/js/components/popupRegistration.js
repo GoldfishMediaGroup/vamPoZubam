@@ -2,7 +2,7 @@ function popupRegistration() {
   const popup = document.querySelector('#popup__registration');
   if (!popup) return;
 
-  const btns = popup.querySelectorAll('.tab-btns__btn');
+  const btns = Array.from(popup.querySelectorAll('.tab-btns__btn'));
   const allTabs = popup.querySelectorAll('.popup__tab');
 
   let countdownInterval;
@@ -71,9 +71,9 @@ function popupRegistration() {
 
     btns.forEach((b) => b.classList.toggle('isActive', b === targetBtn));
 
-    if (btns[0] && btns[0].parentElement) {
-      btns[0].parentElement.classList.toggle('isActive', targetId === 'email');
-    }
+    const index = btns.indexOf(targetBtn);
+    targetBtn.parentElement.style.setProperty('--index', index);
+    targetBtn.parentElement.style.setProperty('--tabs-count', btns.length);
 
     allTabs.forEach((tab) => {
       const isTarget = tab.dataset.content === targetId;
@@ -145,11 +145,28 @@ function popupRegistration() {
     }
 
     setTimeout(() => {
-      form.reset();
+      hardReset(form);
       const submitBtn = form.querySelector('.submit-btn');
       if (submitBtn) submitBtn.disabled = true;
       if (input) input.classList.remove('_form-filled');
     }, 500);
+  }
+  function hardReset(form) {
+    if (!form) return;
+    const inputs = form.querySelectorAll('input, textarea, select');
+
+    inputs.forEach((input) => {
+      if (input.type === 'checkbox' || input.type === 'radio') {
+        input.checked = false;
+      } else {
+        input.value = '';
+      }
+      const parent = input.closest('.form__label') || input.parentElement;
+      if (parent) parent.classList.remove('_form-error');
+    });
+    if (typeof updateSubmitButtonState === 'function') {
+      updateSubmitButtonState();
+    }
   }
 
   clickTriggerBtns();

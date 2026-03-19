@@ -119,3 +119,91 @@
     }
   }
 }
+
+// .tab-btns {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   border: 1rem solid #dfdfdf;
+//   border-radius: 60rem;
+//   position: relative;
+//   height: 68rem;
+//   @include small-tablet {
+//     height: 52rem;
+//   }
+//   &.isActive {
+//     &::before {
+//       left: 50%;
+//     }
+//   }
+//   &::before {
+//     position: absolute;
+//     content: '';
+//     top: 50%;
+//     transform: translateY(-50%);
+//     left: 3rem;
+//     border-radius: 60rem;
+//     width: calc(50% - 3rem);
+//     height: calc(100% - 6rem);
+//     background: $lightbg;
+//     transition: left 0.3s;
+//   }
+//   // .tab-btns__btn
+
+//   &__btn {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     position: relative;
+//     z-index: 1;
+//     pointer-events: fill;
+//     &.isActive {
+//       pointer-events: none;
+//     }
+//   }
+// }
+
+.tab-btns {
+  display: grid;
+  // Автоматическая сетка: сколько кнопок, столько и колонок
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+
+  border: 1rem solid #dfdfdf;
+  border-radius: 60rem;
+  position: relative;
+  height: 68rem;
+
+  @include small-tablet {
+    height: 52rem;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: inherit;
+    --tab-width: calc(100% / var(--tabs-count, 2));
+    left: calc(var(--index, 0) * var(--tab-width) + 3rem);
+
+    width: calc(var(--tab-width) - 6rem);
+    height: calc(100% - 6rem);
+
+    background: $lightbg;
+    transition: left 0.3s ease;
+    z-index: 0;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    &.isActive {
+      pointer-events: none;
+    }
+  }
+}

@@ -17,21 +17,24 @@
       </a>
       <nav class="header__nav" data-da=".header__container, 768, last">
         <div class="header__list-box flex dc">
-          <ul class="header__list flex cv txt20">
+          <ul class="header__list flex cv txt18">
             <li>
               <a class="header__link isActive">Статьи</a>
             </li>
             <li>
-              <a class="header__link">Советы</a>
+              <a class="header__link">Фиксация и очищение</a>
             </li>
             <li>
-              <a class="header__link">Помощь</a>
+              <a class="header__link">Рекомендации специалистов</a>
             </li>
             <li>
-              <a class="header__link">Акция</a>
+              <a class="header__link">Возврат средств</a>
             </li>
             <li>
-              <a class="header__link">FAQ</a>
+              <a class="header__link">Популярные вопросы</a>
+            </li>
+                <li>
+              <a class="header__link">Опросы</a>
             </li>
           </ul>
         </div>
@@ -308,6 +311,130 @@
             </div>
             <button class="popup__btn btn-primary btn-primary--accent txt18" data-popup="#popup__registration" data-kind-register="tel">
               <span>Войти по номеру</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup__nosms-step" aria-hidden="true" class="popup popup--nocode" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body flex dc cv">
+        <button data-close="" type="button" class="popup__close-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.0022 2.85715L2.85938 22" stroke="#00A2AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2.85938 2.85715L22.0022 22" stroke="#00A2AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content flex dc cv">
+          <div class="popup__title flex dc">
+            <p class="h2">Не приходит СМС?</p>
+          </div>
+          <div class="popup__main flex dc">
+            <div class="popup__text">
+              <p class="popup__subtitle txt20 grey">
+                Если вы столкнулись с проблемой неполучения СМС-кода, есть несколько шагов, которые можно предпринять:
+              </p>
+
+              <ul class="popup__info-list">
+                <li class="popup__info-item">
+                  <p class="popup__item-title txt20 upper bold">1. Проверьте, верно ли указан номер</p>
+                </li>
+                <li class="popup__info-item">
+                  <p class="popup__item-title txt20 upper bold">2. Убедитесь, что телефон ловит сеть.</p>
+                </li>
+              </ul>
+            </div>
+            <button class="popup__btn btn-primary btn-primary--accent txt18" data-kind-step="email1" data-close="">
+              <span>Войти по почте</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup__nomail-step" aria-hidden="true" class="popup popup--nocode" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body flex dc cv">
+        <button data-close="" type="button" class="popup__close-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.0022 2.85715L2.85938 22" stroke="#00A2AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2.85938 2.85715L22.0022 22" stroke="#00A2AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content flex dc cv">
+          <div class="popup__title flex dc">
+            <p class="h2">Не поступает письмо с кодом?</p>
+          </div>
+          <div class="popup__main flex dc">
+            <div class="popup__text">
+              <p class="popup__subtitle txt20 grey">
+                Если вы столкнулись с проблемой неполучения кода, есть несколько шагов, которые можно предпринять:
+              </p>
+
+              <ul class="popup__info-list">
+                <li class="popup__info-item">
+                  <p class="popup__item-title txt20 upper bold">1. Проверьте правильность адреса электронной почты</p>
+                  <p class="popup__item-text txt20 medium">
+                    Убедитесь, что вы указали правильный адрес электронной почты в настройках вашего профиля.
+                  </p>
+                </li>
+                <li class="popup__info-item">
+                  <p class="popup__item-title txt20 upper bold">2. Проверьте соединение с сетью</p>
+                  <p class="popup__item-text txt20 medium">
+                    Убедитесь, что у вас хорошее соединение с сетью Интернет, так как плохая соединения может привести к задержкам
+                    в доставке письма.
+                  </p>
+                </li>
+                <li class="popup__info-item">
+                  <p class="popup__item-title txt20 upper bold">3. Попробуйте еще раз</p>
+                  <p class="popup__item-text txt20 medium">
+                    В случае отсутствия письма с кодом, попробуйте запросить его повторно.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <button class="popup__btn btn-primary btn-primary--accent txt18" data-kind-step="tel1" data-close="">
+              <span>Войти по номеру</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup__camera" aria-hidden="true" class="popup popup--camera" data-lenis-prevent="true">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__body flex dc cv">
+        <button data-close="" type="button" class="popup__close-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.0022 2.85715L2.85938 22" stroke="#00A2AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2.85938 2.85715L22.0022 22" stroke="#00A2AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <div class="popup__body-content flex dc cv">
+          <div class="popup__title flex dc">
+            <p class="h2">Сделать фото</p>
+          </div>
+          <div class="camera-file__interface">
+            <div class="camera-file__video">
+              <video class="camera-file__webcam" autoplay="" playsinline="" style="background: #000"></video>
+              <canvas class="camera-file__snapshot"></canvas>
+    
+              <p class="camera-file__disclaimer txt24 white"></p>
+            </div>
+
+
+            <button class="txt20 btn-primary btn-primary--accent camera-file__snap-btn" data-close="">
+              <span>Сделать фото</span>
             </button>
           </div>
         </div>

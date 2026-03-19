@@ -19,6 +19,10 @@
     border-radius: 64rem;
     background: $white;
     box-shadow: 0 5rem 30rem rgba(203, 203, 203, 0.348);
+    gap: 20rem;
+    @include desk-only {
+      justify-content: flex-start;
+    }
     // margin-right: var(--fancybox-scrollbar-compensate);
     @include small-tablet {
       padding: 12rem 18rem;
@@ -30,6 +34,13 @@
   // .header__nav
 
   &__nav {
+    @include desk-only {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 85rem;
+    }
     @include small-tablet {
       position: fixed;
       inset: 0;
@@ -72,7 +83,9 @@
   // .header__list
 
   &__list {
-    gap: 112rem;
+    // gap: 112rem;
+    justify-content: space-between;
+    gap: 36rem;
     @include small-tablet {
       flex-direction: column;
       gap: 32rem;
@@ -86,6 +99,7 @@
 
   &__link {
     position: relative;
+    white-space: nowrap;
     &.isActive {
       color: $accent;
       pointer-events: none;
@@ -114,7 +128,8 @@
 
   &__btn-box {
     gap: 12rem;
-
+    min-width: 308rem;
+    justify-content: flex-end;
     @include small-tablet {
       min-width: unset;
     }
@@ -126,8 +141,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56rem;
-    height: 56rem;
+    width: 68rem;
+    height: 68rem;
     @include small-tablet {
       width: 32rem;
       height: 32rem;
@@ -138,8 +153,8 @@
       width: 28rem;
       height: 28rem;
       @include small-tablet {
-        width: 24rem;
-        height: 24rem;
+        width: 20rem;
+        height: 20rem;
       }
     }
   }
@@ -162,6 +177,9 @@
 
   &__lk-desk {
     display: flex;
+    padding: 21rem 28rem;
+    font-size: 20rem;
+   
   }
 
   // .header__lk-mob

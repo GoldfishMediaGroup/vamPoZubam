@@ -89,10 +89,7 @@ export let formValidate = {
     let formRequiredItems = form.querySelectorAll('*[data-required]');
     if (formRequiredItems.length) {
       formRequiredItems.forEach((formRequiredItem) => {
-        if (
-          (formRequiredItem.offsetParent !== null || formRequiredItem.tagName === 'SELECT') &&
-          !formRequiredItem.disabled
-        ) {
+        if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === 'SELECT') && !formRequiredItem.disabled) {
           error += this.validateInput(formRequiredItem);
         }
       });
@@ -112,7 +109,28 @@ export let formValidate = {
     } else if (formRequiredItem.dataset.required === 'tel') {
       // formRequiredItem.value = formRequiredItem.value.replace(/[^0-9]/g, ''); // Оставить только цифры и символы +()
       if (!/^\+\d{1} \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(formRequiredItem.value)) {
-
+        this.addError(formRequiredItem);
+        error++;
+      } else {
+        this.removeError(formRequiredItem);
+      }
+    } else if (formRequiredItem.dataset.required === 'card') {
+      // formRequiredItem.value = formRequiredItem.value.replace(/[^0-9]/g, ''); // Оставить только цифры и символы +()
+      if (!/^\d{4} \d{4} \d{4} \d{4}$/.test(formRequiredItem.value)) {
+        this.addError(formRequiredItem);
+        error++;
+      } else {
+        this.removeError(formRequiredItem);
+      }
+    } else if (formRequiredItem.dataset.required === 'date') {
+      if (!/^\d{2}\.\d{2}\.\d{4}$/.test(formRequiredItem.value)) {
+        this.addError(formRequiredItem);
+        error++;
+      } else {
+        this.removeError(formRequiredItem);
+      }
+    } else if (formRequiredItem.dataset.required === 'time') {
+      if (!/^([01]\d|2[0-3]):[0-5]\d$/.test(formRequiredItem.value)) {
         this.addError(formRequiredItem);
         error++;
       } else {
@@ -126,7 +144,7 @@ export let formValidate = {
       } else {
         this.removeError(formRequiredItem);
       }
-    }else if (formRequiredItem.dataset.required === 'dropdown') {
+    } else if (formRequiredItem.dataset.required === 'dropdown') {
       if (!formRequiredItem.classList.contains('filled')) {
         this.addError(formRequiredItem);
         error++;
@@ -135,6 +153,16 @@ export let formValidate = {
       }
     } else if (formRequiredItem.dataset.required === 'file') {
       if (formRequiredItem.files.length === 0) {
+        this.addError(formRequiredItem);
+        error++;
+      } else {
+        this.removeError(formRequiredItem);
+      }
+    } else if (formRequiredItem.dataset.required === 'numeric') {
+      const value = formRequiredItem.value.trim();
+      const maxLimit = parseInt(formRequiredItem.dataset.numericMax);
+
+      if (value === '' || !/^\d+$/.test(value) || (maxLimit && value.length > maxLimit)) {
         this.addError(formRequiredItem);
         error++;
       } else {
@@ -183,9 +211,7 @@ export let formValidate = {
       error.classList.remove('active');
     }
     if (formRequiredItem.parentElement.querySelector('.form__error')) {
-      formRequiredItem.parentElement.removeChild(
-        formRequiredItem.parentElement.querySelector('.form__error')
-      );
+      formRequiredItem.parentElement.removeChild(formRequiredItem.parentElement.querySelector('.form__error'));
     }
   },
   formClean(form) {

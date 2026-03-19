@@ -22,6 +22,9 @@ import hero from '../components/hero';
 import showMoreMob from '../utils/showMoreMob';
 import articleDet from '../components/articleDet';
 import popupRegistration from '../components/popupRegistration';
+import lk from '../components/lk';
+import clickTabBtns from '../components/clickTabBtns';
+import moneyBack from '../components/moneyBack';
 
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -36,6 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
   articleDet();
   hero();
   popupRegistration();
+  lk();
+  clickTabBtns();
+  moneyBack();
   try {
     showMoreMob('.article-bibliography__list', 461, '220rem', '.article-bibliography__more');
   } catch {}

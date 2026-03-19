@@ -5,6 +5,8 @@ $dark: #3d4546;
 $grey: #6a7373;
 $lightbg: #f6f6f6;
 $white: #fff;
+$blue: #00a2ac;
+$darkBlue: #001489;
 $accent: #318e88;
 $accentgradient: linear-gradient(133deg, #00909a 0%, #3cc7cd 100%);
 $asideGradient: linear-gradient(
@@ -90,6 +92,12 @@ main {
   .grid#{$i} {
     display: grid;
     grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+@for $i from 1 through 6 {
+  .span#{$i} {
+    grid-column: span $i;
   }
 }
 
