@@ -1,0 +1,43 @@
+        <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M2.57031 6.5H21.4275"
+                                          stroke="#6A7373"
+                                          stroke-width="1.5"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                        <path
+                                          d="M4.92578 6.5H19.0686V20.6429C19.0686 21.0596 18.9031 21.4593 18.6084 21.754C18.3137 22.0487 17.914 22.2143 17.4972 22.2143H6.49721C6.08044 22.2143 5.68074 22.0487 5.38604 21.754C5.09134 21.4593 4.92578 21.0596 4.92578 20.6429V6.5Z"
+                                          stroke="#6A7373"
+                                          stroke-width="1.5"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                        <path
+                                          d="M8.07031 6.50017V5.71446C8.07031 4.67254 8.48421 3.67329 9.22096 2.93654C9.95771 2.19979 10.957 1.78589 11.9989 1.78589C13.0408 1.78589 14.0401 2.19979 14.7768 2.93654C15.5136 3.67329 15.9275 4.67254 15.9275 5.71446V6.50017"
+                                          stroke="#6A7373"
+                                          stroke-width="1.5"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                        <path
+                                          d="M9.64062 9.64307V18.2859"
+                                          stroke="#6A7373"
+                                          stroke-width="1.5"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                        <path
+                                          d="M14.3555 9.64307V18.2859"
+                                          stroke="#6A7373"
+                                          stroke-width="1.5"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        />
+                                      </svg>

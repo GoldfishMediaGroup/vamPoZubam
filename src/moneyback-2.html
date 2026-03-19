@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
+    <title>Статьи</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+      <main>
+        <section class="moneyback">
+          <div class="container">
+            <div class="moneyback__inner">
+              <nav class="breadcrumbs">
+                <ul class="breadcrumbs__list txt18">
+                  <li><a href="#">Главная</a></li>
+                  <li><p>Возврат денежных средств</p></li>
+                </ul>
+              </nav>
+              <div class="moneyback__main-wrap flex dc">
+                <p class="h1">Возврат денежных средств</p>
+
+                <div class="moneyback__main">
+                  <div class="moneyback__steps">
+                    <ul class="moneyback__steps-head steps-head" data-step="2">
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">01</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Ввод данных чека</p>
+                      </li>
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">02</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Заполнение формы</p>
+                      </li>
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">03</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Обработка заявления</p>
+                      </li>
+                    </ul>
+                    <div class="moneyback__steps-step steps-step steps-step--2">
+                      <form class="steps-step__form-wrap">
+                        <div class="steps-step__form-item">
+                          <p class="steps-step__form-title h3 upper">Личные данные</p>
+                          <div class="form__label-box steps-step__form-label-box flex dc">
+                            <label class="form__label">
+                              <span class="form__label-inner">
+                                <input
+                                  class="form__input input--name"
+                                  type="text"
+                                  data-validate
+                                  data-required="name"
+                                  autocomplete="off"
+                                  name="form[]"
+                                  placeholder=""
+                                />
+                                <span class="form__placeholder txt12 light lh140">Имя*</span>
+                              </span>
+                              <span class="form__error txt10 light">Некорректное значение</span>
+                            </label>
+
+                            <label class="form__label">
+                              <span class="form__label-inner">
+                                <input
+                                  class="form__input input--name"
+                                  type="text"
+                                  data-validate
+                                  data-required="name"
+                                  autocomplete="off"
+                                  name="form[]"
+                                  placeholder=""
+                                />
+                                <span class="form__placeholder txt12 light lh140">Фамилия*</span>
+                              </span>
+                              <span class="form__error txt10 light">Некорректное значение</span>
+                            </label>
+
+                            <label class="form__label">
+                              <span class="form__label-inner">
+                                <input
+                                  class="form__input input--tel phone-mask"
+                                  type="text"
+                                  data-validate
+                                  data-required="tel"
+                                  autocomplete="off"
+                                  name="form[]"
+                                  placeholder=""
+                                />
+                                <span class="form__placeholder txt12 light lh140">Номер телефона*</span>
+                              </span>
+                              <span class="form__error txt10 light">Некорректное значение</span>
+                            </label>
+
+                            <label class="form__label">
+                              <span class="form__label-inner">
+                                <input
+                                  class="form__input input--mail"
+                                  type="text"
+                                  data-validate
+                                  data-required="email"
+                                  autocomplete="off"
+                                  name="form[]"
+                                  placeholder=""
+                                />
+
+                                <span class="form__placeholder txt12 light lh140">E-mail*</span>
+                              </span>
+                              <span class="form__error txt10 light">Некорректное значение</span>
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="steps-step__form-item">
+                          <p class="steps-step__form-title h3 upper">Данные перевода средств</p>
+                          <div class="steps-step__tab-btns tab-btns">
+                            <button class="tab-btns__btn txt20" data-triger="byTel">По телефону</button>
+                            <button class="tab-btns__btn txt20" data-triger="byCard">На карту</button>
+                          </div>
+
+                          <div class="steps-step__tabs">
+                            <div class="steps-step__tab" data-content="byTel">
+                              <label class="form__label">
+                                <span class="form__label-inner">
+                                  <input
+                                    class="form__input input--tel phone-mask"
+                                    type="text"
+                                    data-validate
+                                    data-required="tel"
+                                    autocomplete="off"
+                                    name="form[]"
+                                    placeholder=""
+                                  />
+                                  <span class="form__placeholder txt12 light lh140">Номер телефона*</span>
+                                </span>
+                                <span class="form__error txt10 light">Некорректное значение</span>
+                              </label>
+                            </div>
+                            <div class="steps-step__tab" data-content="byCard">
+                              <label class="form__label span2">
+                                <span class="form__label-inner">
+                                  <input
+                                    class="form__input input--card card-mask"
+                                    type="text"
+                                    data-validate
+                                    data-required="card"
+                                    autocomplete="off"
+                                    name="form[]"
+                                    placeholder=""
+                                  />
+                                  <span class="form__placeholder txt12 light lh140">Сумма чека, ₽</span>
+                                </span>
+                                <span class="form__error txt10 light">Некорректное значение</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button disabled class="txt20 btn-primary btn-primary--accent submit-btn">
+                          <span>Далее</span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <include src="./components/_footer.html"></include>
+      <div class="fancybox-bg"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
+    <title>Статьи</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+      <main>
+        <section class="lk">
+          <div class="container">
+            <div class="lk__inner">
+              <nav class="breadcrumbs">
+                <ul class="breadcrumbs__list txt18">
+                  <li><a href="#">Главная</a></li>
+                  <li><p>Личный кабинет</p></li>
+                </ul>
+              </nav>
+              <div class="lk__main-wrap flex dc">
+                <p class="h1">Личный кабинет</p>
+
+                <div class="lk__main">
+                  <include src="./components/_lk-nav.html"></include>
+                  <div class="lk__content">
+                    <include src="./components/_lk-app.html"></include>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <include src="./components/_footer.html"></include>
+      <div class="fancybox-bg"></div>
+    </div>
+  </body>
+</html>

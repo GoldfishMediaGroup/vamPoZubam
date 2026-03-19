@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
+    <title>Статьи</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+      <main>
+        <section class="moneyback">
+          <div class="container">
+            <div class="moneyback__inner">
+              <nav class="breadcrumbs">
+                <ul class="breadcrumbs__list txt18">
+                  <li><a href="#">Главная</a></li>
+                  <li><p>Возврат денежных средств</p></li>
+                </ul>
+              </nav>
+              <div class="moneyback__main-wrap flex dc">
+                <p class="h1">Возврат денежных средств</p>
+
+                <div class="moneyback__main">
+                  <div class="moneyback__steps">
+                    <ul class="moneyback__steps-head steps-head" data-step="3">
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">01</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Ввод данных чека</p>
+                      </li>
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">02</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Заполнение формы</p>
+                      </li>
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">03</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Обработка заявления</p>
+                      </li>
+                    </ul>
+                    <div class="moneyback__steps-step steps-step steps-step--3">
+                      <div class="steps-step__form-wrap">
+                        <div class="steps-step__form-item">
+                          <p class="steps-step__form-title h3 upper">
+                            Хотите отслеживать статус заявки? Войдите или Зарегистрируйтесь
+                          </p>
+                          <div class="steps-step__tab-wrap">
+                            <div class="steps-step__tab-btns tab-btns">
+                              <button class="tab-btns__btn txt20" data-triger="tel1">По телефону</button>
+                              <button class="tab-btns__btn txt20" data-triger="email1">По почте</button>
+                            </div>
+                            <div class="steps-step__tabs">
+                              <div class="steps-step__tab tab tab--tel isActive" data-content="tel1">
+                                <div class="steps-step__tab-start isActive" data-start>
+                                  <form class="steps-step__tab-form form" data-dev action="">
+                                    <div class="steps-step__tab-start-content">
+                                      <p class="txt20 grey">По данному номеру поступит СМС с кодом.</p>
+                                      <div class="form__label-box">
+                                        <label class="form__label">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--tel phone-mask"
+                                              type="text"
+                                              data-validate
+                                              data-required="tel"
+                                              autocomplete="off"
+                                              name="form[]"
+                                              placeholder=""
+                                              value="+7 (999) 999-99-99"
+                                            />
+                                            <span class="form__placeholder txt12 light lh140">Номер телефона*</span>
+                                          </span>
+                                          <span class="form__error txt10 light">Некорректное значение</span>
+                                        </label>
+                                      </div>
+                                    </div>
+
+                                    <div class="form__btn-box">
+                                      <button disabled type="submit" class="submit-btn btn-primary btn-primary--accent">
+                                        <span class="txt20">Получить код</span>
+                                      </button>
+
+                                      <button type="button" class="btn-primary">
+                                        <span class="txt20">Отправить без отслеживания</span>
+                                      </button>
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="steps-step__tab-end" data-end>
+                                  <div class="steps-step__tab-end-back-info">
+                                    <p class="txt20 grey">
+                                      Укажите код из СМС на номер
+                                      <span>+7(900)000-00-00</span>
+                                    </p>
+                                    <button class="steps-step__tab-end-back-btn link">Изменить номер</button>
+                                  </div>
+                                  <div class="steps-step__tab-end-form-box">
+                                    <form action="" class="steps-step__tab-form form" data-dev action="">
+                                      <div class="form__num-box">
+                                        <label class="form__label form__label--num">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--code"
+                                              type="text"
+                                              data-validate
+                                              data-required
+                                              autocomplete="off"
+                                              name="form[]"
+                                              maxlength="1"
+                                            />
+                                          </span>
+                                        </label>
+
+                                        <label class="form__label form__label--num">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--code"
+                                              type="text"
+                                              data-validate
+                                              data-required
+                                              autocomplete="off"
+                                              name="form[]"
+                                              maxlength="1"
+                                            />
+                                          </span>
+                                        </label>
+                                        <label class="form__label form__label--num">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--code"
+                                              type="text"
+                                              data-validate
+                                              data-required
+                                              autocomplete="off"
+                                              name="form[]"
+                                              maxlength="1"
+                                            />
+                                          </span>
+                                        </label>
+                                        <label class="form__label form__label--num">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--code"
+                                              type="text"
+                                              data-validate
+                                              data-required
+                                              autocomplete="off"
+                                              name="form[]"
+                                              maxlength="1"
+                                            />
+                                          </span>
+                                        </label>
+                                      </div>
+                                    </form>
+                                    <div class="steps-step__tab-end-btn-box">
+                                      <button
+                                        data-timer="55"
+                                        disabled
+                                        class="steps-step__tab-end-timer btn-primary btn-primary--accent"
+                                      >
+                                        <span class="txt20"></span>
+                                      </button>
+                                      <button data-popup="#popup__nosms-step" class="steps-step__tab-end-nocode link">
+                                        Не приходит СМС с кодом?
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="steps-step__tab tab tab--email" data-content="email1">
+                                <div class="steps-step__tab-start" data-start>
+                                  <form class="steps-step__tab-form form" data-dev action="">
+                                    <div class="steps-step__tab-start-content">
+                                      <p class="txt20 grey">На данную почту поступит письмо с кодом</p>
+                                      <div class="form__label-box">
+                                        <label class="form__label">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--mail"
+                                              type="text"
+                                              data-validate
+                                              data-required="email"
+                                              autocomplete="off"
+                                              name="form[]"
+                                              value="example@mail.ru"
+                                              placeholder=""
+                                            />
+
+                                            <span class="form__placeholder txt12 light lh140">E-mail*</span>
+                                          </span>
+                                          <span class="form__error txt10 light">Некорректное значение</span>
+                                        </label>
+                                      </div>
+                                    </div>
+
+                                    <div class="form__btn-box">
+                                      <button disabled type="submit" class="submit-btn btn-primary btn-primary--accent">
+                                        <span class="txt20">Получить код</span>
+                                      </button>
+                                      <button type="button" class="btn-primary">
+                                        <span class="txt20">Отправить без отслеживания</span>
+                                      </button>
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="steps-step__tab-end" data-end>
+                                  <div class="steps-step__tab-end-back-info">
+                                    <p class="txt20 grey">
+                                      Укажите код из письма на почту
+                                      <span>mail@example.ru</span>
+                                    </p>
+                                    <button class="steps-step__tab-end-back-btn link">Изменить почту</button>
+                                  </div>
+                                  <div class="steps-step__tab-end-form-box">
+                                    <form action="" class="steps-step__tab-form form" data-dev action="">
+                                      <div class="form__num-box">
+                                        <label class="form__label form__label--num">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--code"
+                                              type="text"
+                                              data-validate
+                                              data-required
+                                              autocomplete="off"
+                                              name="form[]"
+                                              maxlength="1"
+                                            />
+                                          </span>
+                                        </label>
+
+                                        <label class="form__label form__label--num">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--code"
+                                              type="text"
+                                              data-validate
+                                              data-required
+                                              autocomplete="off"
+                                              name="form[]"
+                                              maxlength="1"
+                                            />
+                                          </span>
+                                        </label>
+                                        <label class="form__label form__label--num">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--code"
+                                              type="text"
+                                              data-validate
+                                              data-required
+                                              autocomplete="off"
+                                              name="form[]"
+                                              maxlength="1"
+                                            />
+                                          </span>
+                                        </label>
+                                        <label class="form__label form__label--num">
+                                          <span class="form__label-inner">
+                                            <input
+                                              class="form__input input--code"
+                                              type="text"
+                                              data-validate
+                                              data-required
+                                              autocomplete="off"
+                                              name="form[]"
+                                              maxlength="1"
+                                            />
+                                          </span>
+                                        </label>
+                                      </div>
+                                    </form>
+                                    <div class="steps-step__tab-end-btn-box">
+                                      <button
+                                        data-timer="55"
+                                        disabled
+                                        class="steps-step__tab-end-timer btn-primary btn-primary--accent"
+                                      >
+                                        <span class="txt20"></span>
+                                      </button>
+                                      <button data-popup="#popup__nomail-step" class="steps-step__tab-end-nocode link">
+                                        Не приходит письмо с кодом?
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="steps-step__form-item">
+                          <p class="steps-step__form-title h3 upper">Заявка отправлена</p>
+
+                          <p class="txt20 grey">По данному номеру поступит СМС с кодом.</p>
+
+                          <div class="form__btn-box">
+                            <button type="button" class="btn-primary btn-primary--accent">
+                              <span class="txt20">Отслеживать в ЛК</span>
+                            </button>
+
+                            <button type="button" class="btn-primary">
+                              <span class="txt20">Закрыть</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <include src="./components/_footer.html"></include>
+      <div class="fancybox-bg"></div>
+    </div>
+  </body>
+</html>

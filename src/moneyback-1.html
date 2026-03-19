@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://api-maps.yandex.ru/v3/?apikey=cb93da52-9741-4ffe-86ea-93a91ce99a1c&lang=ru_RU"></script>
+    <title>Статьи</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <include src="./components/_header.html"></include>
+      <include src="./components/_popup.html"></include>
+      <main>
+        <section class="moneyback">
+          <div class="container">
+            <div class="moneyback__inner">
+              <nav class="breadcrumbs">
+                <ul class="breadcrumbs__list txt18">
+                  <li><a href="#">Главная</a></li>
+                  <li><p>Возврат денежных средств</p></li>
+                </ul>
+              </nav>
+              <div class="moneyback__main-wrap flex dc">
+                <p class="h1">Возврат денежных средств</p>
+
+                <div class="moneyback__main">
+                  <div class="moneyback__guarantee guarantee">
+                    <div class="guarantee__content flex dc">
+                      <div class="guarantee__head flex dc white">
+                        <p class="guarantee__title h2">Не устроил результат — вернем деньги!</p>
+                        <p class="guarantee__subtitle txt24">
+                          Мы уверены в качестве товаров, поэтому предоставляем гарантию возврата средств
+                        </p>
+                      </div>
+                      <ul class="guarantee__list flex dc">
+                        <li class="guarantee__item flex dc">
+                          <div class="guarantee__item-head flex cv">
+                            <p class="guarantee__item-num txt24 medium">01</p>
+                            <p class="guarantee__item-title txt28">Загрузите данные о чеке</p>
+                          </div>
+                          <p class="txt24 grey">В форме ниже прикрепите чек для подтверждения совершённой покупки</p>
+                        </li>
+                        <li class="guarantee__item flex dc">
+                          <div class="guarantee__item-head flex cv">
+                            <p class="guarantee__item-num txt24 medium">02</p>
+                            <p class="guarantee__item-title txt28">Заполните форму</p>
+                          </div>
+                          <p class="txt24 grey">Нам понадобится немного данных, чтобы корректно оформить возврат средств</p>
+                        </li>
+                        <li class="guarantee__item flex dc">
+                          <div class="guarantee__item-head flex cv">
+                            <p class="guarantee__item-num txt24 medium">03</p>
+                            <p class="guarantee__item-title txt28">Получите деньги</p>
+                          </div>
+                          <p class="txt24 grey">Средства будут зачислены на ваш счёт в течение 10 дней</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="guarantee__img">
+                      <img src="./assets/images/12.03.26/guaranteeImg.webp" alt="" />
+                    </div>
+                  </div>
+                  <div class="moneyback__steps">
+                    <ul class="moneyback__steps-head steps-head" data-step="1">
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">01</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Ввод данных чека</p>
+                      </li>
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">02</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Заполнение формы</p>
+                      </li>
+                      <li class="steps-head__item">
+                        <div class="steps-head__circle">
+                          <div class="steps-head__num">
+                            <p class="txt24">03</p>
+                          </div>
+                          <div class="steps-head__check">
+                            <div class="steps-head__check-svg">
+                              <img src="./assets/images/12.03.26/checkSteps.svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                        <p class="steps-head__text txt24">Обработка заявления</p>
+                      </li>
+                    </ul>
+
+                    <div class="moneyback__steps-step steps-step steps-step--1">
+                      <div class="steps-step__form-wrap">
+                        <div class="steps-step__tab-btns tab-btns">
+                          <button class="tab-btns__btn txt20" data-triger="hand">Вручную</button>
+                          <button class="tab-btns__btn txt20" data-triger="add">Загрузить</button>
+                        </div>
+
+                        <div class="steps-step__tabs">
+                          <div class="steps-step__tab" data-content="hand">
+                            <form class="steps-step__form">
+                              <div class="steps-step__form-main">
+                                <div class="form__label-box steps-step__form-label-box grid2">
+                                  <label class="form__label ">
+                                    <span class="form__label-inner">
+                                      <input
+                                        class="form__input input--date date-mask"
+                                        type="text"
+                                        data-validate
+                                        data-required="date"
+                                        autocomplete="off"
+                                        name="form[]"
+                                        placeholder=""
+                                      />
+                                      <span class="form__placeholder txt12 light lh140">Дата операции*</span>
+                                      <span class="form__input-svg">
+                                        <img src="./assets/images/26.02.26/articleCalendar.svg" alt="" />
+                                      </span>
+                                    </span>
+                                    <span class="form__error txt10 light">Некорректное значение</span>
+                                  </label>
+
+                                  <label class="form__label">
+                                    <span class="form__label-inner">
+                                      <input
+                                        class="form__input input--time time-mask"
+                                        type="text"
+                                        data-validate
+                                        data-required="time"
+                                        autocomplete="off"
+                                        name="form[]"
+                                        placeholder=""
+                                      />
+                                      <span class="form__placeholder txt12 light lh140">Время операции*</span>
+                                      <span class="form__input-svg">
+                                        <img src="./assets/images/26.02.26/articleTime.svg" alt="" />
+                                      </span>
+                                    </span>
+                                    <span class="form__error txt10 light">Некорректное значение</span>
+                                  </label>
+
+                                  <label class="form__label span2">
+                                    <span class="form__label-inner">
+                                      <input
+                                        class="form__input input--amount"
+                                        type="text"
+                                        data-validate
+                                        data-required="amount"
+                                        autocomplete="off"
+                                        name="form[]"
+                                        placeholder=""
+                                      />
+                                      <span class="form__placeholder txt12 light lh140">Сумма чека, ₽</span>
+                                    </span>
+                                    <span class="form__error txt10 light">Некорректное значение</span>
+                                  </label>
+
+                                  <label class="form__label span2">
+                                    <span class="form__label-inner">
+                                      <input
+                                        class="form__input input--numeric"
+                                        type="text"
+                                        data-validate
+                                        data-required="numeric"
+                                        data-numeric-max="16"
+                                        autocomplete="off"
+                                        name="form[]"
+                                        placeholder=""
+                                      />
+                                      <span class="form__placeholder txt12 light lh140">
+                                        ФН (Фискальный Накопитель) не более 16 символов*
+                                      </span>
+                                    </span>
+                                    <span class="form__error txt10 light">Некорректное значение</span>
+                                  </label>
+
+                                  <label class="form__label span2">
+                                    <span class="form__label-inner">
+                                      <input
+                                        class="form__input input--numeric"
+                                        type="text"
+                                        data-validate
+                                        data-required="numeric"
+                                        data-numeric-max=""
+                                        autocomplete="off"
+                                        name="form[]"
+                                        placeholder=""
+                                      />
+                                      <span class="form__placeholder txt12 light lh140">ФД (Фискальный Документ)</span>
+                                    </span>
+                                    <span class="form__error txt10 light">Некорректное значение</span>
+                                  </label>
+
+                                  <label class="form__label span2">
+                                    <span class="form__label-inner">
+                                      <input
+                                        class="form__input input--numeric"
+                                        type="text"
+                                        data-validate
+                                        data-required="numeric"
+                                        data-numeric-max="10"
+                                        autocomplete="off"
+                                        name="form[]"
+                                        placeholder=""
+                                      />
+                                      <span class="form__placeholder txt12 light lh140">
+                                        ФП или ФПД (Фискальный признак) не более 10 символов
+                                      </span>
+                                    </span>
+                                    <span class="form__error txt10 light">Некорректное значение</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <button disabled type="submit" class="submit-btn btn-primary btn-primary--accent">
+                                <span class="txt20">Загрузить чек</span>
+                              </button>
+                            </form>
+                          </div>
+                          <div class="steps-step__tab" data-content="add">
+                            <form class="steps-step__form">
+                              <div class="steps-step__form-main">
+                                <div class="steps-step__file-wrap">
+                                  <label class="steps-step__take-photo-label take-photo">
+                                    <input
+                                      type="file"
+                                      class="take-photo__input"
+                                      accept="image/*"
+                                      capture="environment"
+                                      multiple
+                                      hidden
+                                      name="file-bills"
+                                    />
+                                    <span class="take-photo__info">
+                                      <p class="txt28">Сделайте фото чека</p>
+                                      <span class="txt20 btn-primary btn-primary--accent"><span>Включить камеру</span></span>
+                                    </span>
+                                  </label>
+
+                                  <label class="steps-step__file-label choose-file">
+                                    <input
+                                      type="file"
+                                      class="choose-file__input"
+                                      accept=".png, .jpg, .jpeg, .pdf, .webp"
+                                      multiple
+                                      hidden
+                                      name="file-bills"
+                                    />
+                                    <span class="choose-file__info">
+                                      <span class="choose-file__head">
+                                        <span class="choose-file__svg">
+                                          <img src="./assets/images/12.03.26/chooseFileSvg.svg" alt="" />
+                                        </span>
+                                        <span class="choose-file__text">
+                                          <span class="txt20 bold">Выберите файл или перетащите его</span>
+                                          <span class="txt18 grey">PNG, JPEG, PDF формат, весом не более 50 MB</span>
+                                        </span>
+                                      </span>
+                                      <span class="choose-file__btn link-primary">
+                                        <span class="link-primary__text txt20">Выбрать файл</span>
+                                        <span class="link-primary__svg-box">
+                                          <span class="link-primary__svg">
+                                            <img src="./assets/images/arrGradient.svg" alt="" />
+                                          </span>
+                                        </span>
+                                      </span>
+                                    </span>
+                                  </label>
+
+                                  <div class="camera-file">
+                                    <button class="txt20 btn-primary camera-file__start" data-popup="#popup__camera">
+                                      <span>Сделать фото</span>
+                                    </button>
+                                  </div>
+                                </div>
+
+                                <ul
+                                  class="steps-step__file-list"
+                                  data-max-size="50"
+                                  data-icon-path="./assets/images/12.03.26/"
+                                ></ul>
+                              </div>
+                              <button disabled type="submit" class="submit-btn btn-primary btn-primary--accent">
+                                <span class="txt20">Загрузить чек</span>
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="steps-step__img-wrap">
+                        <div class="steps-step__img-text">
+                          <p class="h3">Данные чека</p>
+                          <p class="txt24">
+                            Внимание! Ваш чек может отличаться
+                            <br />
+                            от приведенных ниже вариантов.
+                          </p>
+                        </div>
+                        <div class="steps-step__img">
+                          <img src="./assets/images/12.03.26/bill.webp" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <include src="./components/_footer.html"></include>
+      <div class="fancybox-bg"></div>
+    </div>
+
+    <script>
+      // массив с данными всех добавленных файлов
+      window.arrInputFiles = [];
+    </script>
+  </body>
+</html>

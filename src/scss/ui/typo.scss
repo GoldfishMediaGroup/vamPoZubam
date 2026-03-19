@@ -42,6 +42,17 @@
   }
 }
 
+.txt28 {
+  font-weight: 500;
+  font-size: 28rem;
+  line-height: 143%;
+  @include small-tablet {
+    font-size: 16rem;
+    font-weight: 600;
+    line-height: auto;
+  }
+}
+
 .txt24 {
   font-weight: 500;
   font-size: 24rem;
@@ -131,4 +142,7 @@
 
 .grey {
   color: $grey;
+}
+.blue {
+  color: $blue;
 }
