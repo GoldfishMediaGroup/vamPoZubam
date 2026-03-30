@@ -36,7 +36,16 @@
         }
       }
     }
-
+    & ul,
+    & li {
+      list-style-type: disc;
+    }
+    & ul {
+      padding-left: 30rem;
+      @include small-tablet {
+        padding-left: 15rem;
+      }
+    }
     & h2 {
       font-weight: 700;
       font-size: 44rem;
