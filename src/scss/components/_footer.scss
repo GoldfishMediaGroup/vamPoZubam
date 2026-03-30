@@ -60,14 +60,30 @@
     }
   }
 
+  &__list-box {
+    display: flex;
+    align-items: center;
+    gap: 36rem;
+    @include small-tablet {
+      display: grid;
+      grid-template-columns: 175rem 132rem;
+      gap: 12rem;
+    }
+  }
+
   // .footer__list
 
   &__list {
-    gap: 80rem;
+    gap: 36rem;
+    @include desk-only {
+      white-space: nowrap;
+    }
     @include small-tablet {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      flex-direction: column;
       gap: 12rem;
+      font-size: 14rem;
+      align-items: start;
+      font-weight: 600;
     }
   }
 
