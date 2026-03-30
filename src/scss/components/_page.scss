@@ -1,0 +1,73 @@
+.page {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32rem;
+    @include small-tablet {
+      gap: 12rem;
+    }
+  }
+
+  & .breadcrumbs {
+    margin-left: 48rem;
+    @include small-tablet {
+      margin-left: unset;
+    }
+  }
+
+  &__content {
+    border-radius: 24rem;
+    padding: 56rem 595rem 56rem 48rem;
+    background-color: $white;
+
+    @include small-tablet {
+      border-radius: 16rem;
+      padding: 16rem 12rem;
+    }
+    & p {
+      margin-bottom: 20rem;
+      &:not(:first-child) {
+        margin-top: 20rem;
+      }
+      @include small-tablet {
+        margin-bottom: 12rem;
+        &:not(:first-child) {
+          margin-top: 12rem;
+        }
+      }
+    }
+
+    & h2 {
+      font-weight: 700;
+      font-size: 44rem;
+      line-height: 136%;
+
+      margin-bottom: 24rem;
+      &:not(:first-child) {
+        margin-top: 28rem;
+      }
+      @include small-tablet {
+        font-size: 22rem;
+        line-height: 123%;
+        margin-bottom: 16rem;
+        &:not(:first-child) {
+          margin-top: 18rem;
+        }
+      }
+    }
+
+    & h1 {
+      margin-bottom: 30rem;
+      &:not(:first-child) {
+        margin-top: 32rem;
+      }
+
+      @include small-tablet {
+        margin-bottom: 20rem;
+        &:not(:first-child) {
+          margin-top: 24rem;
+        }
+      }
+    }
+  }
+}
